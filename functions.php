@@ -101,7 +101,7 @@ add_action( 'after_setup_theme', 'chaletsetcaviar_content_width', 0 );
 function chaletsetcaviar_scripts() {
 	wp_enqueue_style( 'chaletsetcaviar-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'chaletsetcaviar-bs-style', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' ); //Bootstrap 4 from CDN
+	wp_enqueue_style( 'chaletsetcaviar-bs-style', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), '4.0.0' ); //Bootstrap 4 from CDN
 
 	wp_enqueue_style( 'chaletsetcaviar-fontawsome-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' ); //Font Awsome from CDN
 
