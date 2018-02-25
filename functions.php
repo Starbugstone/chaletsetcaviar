@@ -60,10 +60,11 @@ if ( ! function_exists( 'chaletsetcaviar_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'chaletsetcaviar_custom_background_args', array(
+		/*add_theme_support( 'custom-background', apply_filters( 'chaletsetcaviar_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
-		) ) );
+		) ) );*/
+		//EDIT, Do not need for our theme
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -91,7 +92,7 @@ add_action( 'after_setup_theme', 'chaletsetcaviar_setup' );
  * @global int $content_width
  */
 function chaletsetcaviar_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'chaletsetcaviar_content_width', 1140 ); //--EDIT-- Max width of imported content default 640
+	$GLOBALS['content_width'] = apply_filters( 'chaletsetcaviar_content_width', 1170 ); //--EDIT-- Max width of imported content default 640
 }
 add_action( 'after_setup_theme', 'chaletsetcaviar_content_width', 0 );
 
