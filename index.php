@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="main-content-area content-area">
 		<main id="main" class="site-main">
 
 			<?php
@@ -89,16 +89,17 @@ get_header(); ?>
 			$categories = get_categories();
 
 			foreach ( $categories as $category ) {
+				//var_dump($category);
 				$args = array(
 					'cat' => $category->term_id,
 					'post_type' => 'post',
-					'posts_per_page' => '3',
+					'posts_per_page' => 3
 				);
 				$query = new WP_Query( $args );
-
+				//var_dump($query);
 				if ( $query->have_posts() ) { ?>
 
-				    <section class="<?php echo $category->name; ?> listing">
+				    <section class="<?php echo $category->slug; ?> listing">
 				        <h2>Dernieres <?php echo $category->name; ?>:</h2>
 
 				        <?php while ( $query->have_posts() ) {
@@ -109,7 +110,7 @@ get_header(); ?>
 				            <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
 				                <?php if ( has_post_thumbnail() ) { ?>
 				                    <a href="<?php the_permalink(); ?>">
-				                        <?php the_post_thumbnail( 'thumbnail' ); ?>
+				                        <?php the_post_thumbnail( 'medium' ); //Medium is 300x300 ?>
 				                    </a>
 				                <?php } ?>
 

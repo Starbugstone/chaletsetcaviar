@@ -292,12 +292,12 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
+/*.main-navigation {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
-}
+}*/ /*EDIT : Messing up my perectly laid plans */
 
 .main-navigation ul {
 	display: none;
