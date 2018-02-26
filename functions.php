@@ -102,6 +102,8 @@ add_action( 'after_setup_theme', 'chaletsetcaviar_content_width', 0 );
 function chaletsetcaviar_scripts() {
 	wp_enqueue_style( 'chaletsetcaviar-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'chaletsetcaviar-custom-style', get_template_directory_uri() . '/css/style.css' ); // Our own custom CSS file
+
 	wp_enqueue_style( 'chaletsetcaviar-bs-style', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), '4.0.0' ); //Bootstrap 4 from CDN
 
 	wp_enqueue_style( 'chaletsetcaviar-fontawsome-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' ); //Font Awsome from CDN
@@ -110,8 +112,8 @@ function chaletsetcaviar_scripts() {
 
 	wp_enqueue_script( 'chaletsetcaviar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_register_script( 'pooper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', false, '1.12.9', true ); // register the pooper js for BS
-	wp_enqueue_script('pooper');
+	wp_enqueue_script( 'pooper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', false, '1.12.9', true ); // register the pooper js for BS
+	//wp_enqueue_script('pooper');
 
 	wp_enqueue_script( 'chaletsetcaviar-bs-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), '4.0.0', true ); //And register the BS
 
