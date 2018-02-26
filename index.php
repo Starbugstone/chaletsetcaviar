@@ -40,7 +40,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<!-- Slide Two - Set the background image for this slide in the line below -->
-					<div class="carousel-item" style="background-image: url('https://placehold.it/1900x1080')">
+					<div class="carousel-item" style="background-image: url('https://placehold.it/900x900')">
 						<div class="carousel-caption d-none d-md-block">
 							<h3>Second Slide</h3>
 							<p>This is a description for the second slide.</p>
@@ -72,15 +72,15 @@ get_header(); ?>
 			?>
 
 		<?php
-		if ( have_posts() ) :
+		if ( have_posts() ) {
 
-			if ( is_home() && ! is_front_page() ) : ?>
+			if ( is_home() && ! is_front_page() ) { ?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
 
 			<?php
-			endif;
+			}	//endif;
 			/*
 			====================================================
 			Get all the categories and grab the first 3 posts
@@ -101,30 +101,32 @@ get_header(); ?>
 
 				    <section class="<?php echo $category->slug; ?> listing">
 				        <h2>Dernieres <?php echo $category->name; ?>:</h2>
+								<div class="row align-items-center">
+					        <?php while ( $query->have_posts() ) {
 
-				        <?php while ( $query->have_posts() ) {
+					            $query->the_post();
+					            ?>
+											<div class="col-md-4">
+						            <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
+						                <?php if ( has_post_thumbnail() ) { ?>
+						                    <a href="<?php the_permalink(); ?>">
+						                        <?php the_post_thumbnail( 'medium' ); //Medium is 300x300 ?>
+						                    </a>
+						                <?php } ?>
 
-				            $query->the_post();
-				            ?>
+						                <h3 class="entry-title">
+						                    <a href="<?php the_permalink(); ?>">
+						                        <?php the_title(); ?>
+						                    </a>
+						                </h3>
 
-				            <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
-				                <?php if ( has_post_thumbnail() ) { ?>
-				                    <a href="<?php the_permalink(); ?>">
-				                        <?php the_post_thumbnail( 'medium' ); //Medium is 300x300 ?>
-				                    </a>
-				                <?php } ?>
+						                <?php the_excerpt(  ); ?>
 
-				                <h3 class="entry-title">
-				                    <a href="<?php the_permalink(); ?>">
-				                        <?php the_title(); ?>
-				                    </a>
-				                </h3>
+						            </article>
+											</div>
 
-				                <?php the_excerpt(  ); ?>
-
-				            </article>
-
-				        <?php } // end while ?>
+					        <?php } // end while ?>
+								</div>
 
 				    </section>
 
@@ -132,9 +134,10 @@ get_header(); ?>
 
 				// Use reset to restore original query.
 				wp_reset_postdata();
-			}
+				echo('<hr>');
+			} //end foreach categories
 
-		endif; ?>
+		} //endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

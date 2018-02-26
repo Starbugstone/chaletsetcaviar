@@ -9,12 +9,8 @@ Header
   width: 100%;
 }
 
-.main-navigation{
-  float: right;
-}
-
 .site-branding{
-  float: left;
+
 }
 
 /*
@@ -22,20 +18,31 @@ Header
 Navigation
 ==============================================
 */
-.main-navigation{
-    background-color: black;
-    padding: 10px 0 10px 25px;
-    margin-right: 5px;
+#site-navigation{
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
 }
 
-.main-navigation a, .main-navigation a:hover{
+#site-navigation ul{
+  float: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#site-navigation a, #site-navigation a:hover{
   color: white;
 }
 
-.main-navigation li{
+#site-navigation li{
   padding-right: 25px;
 }
 
+/*
+==============================================
+Pages
+==============================================
+*/
 .content-area {
   margin-top: 100px;
 }
