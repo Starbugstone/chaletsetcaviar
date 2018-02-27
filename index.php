@@ -129,7 +129,7 @@ get_header(); ?>
 																}else{
 																	//default image
 																	$defaultImageUri = get_template_directory_uri().'/img/image_non_disponible.png';
-																	echo '<img src="'.$defaultImageUri.'" />';
+																	echo '<img src="'.$defaultImageUri.'" alt="Pas d\'image" />';
 																}
 
 																?>

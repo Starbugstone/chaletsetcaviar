@@ -42,10 +42,9 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
-		<div class="site-branding">
+		<div itemscope class="site-branding">
 			<?php
 			the_custom_logo();
-
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
