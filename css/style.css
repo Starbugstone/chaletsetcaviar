@@ -40,6 +40,23 @@ Navigation
 
 /*
 ==============================================
+Index page Articles
+==============================================
+*/
+
+.entry-title{
+  text-align: center;
+}
+.index_article_post_image{
+  min-height: 300px;
+  max-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+==============================================
 Pages
 ==============================================
 */

@@ -65,83 +65,98 @@ get_header(); ?>
 			====================================================
 			*/
 			?>
+			<section class="container-fluid">
+				<?php
+				if ( have_posts() ) {
 
-		<?php
-		if ( have_posts() ) {
+					if ( is_home() && ! is_front_page() ) { ?>
+						<header>
+							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+						</header>
 
-			if ( is_home() && ! is_front_page() ) { ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+					<?php
+					}	//endif;
+					/*
+					====================================================
+					Get all the categories and grab the first 3 posts
+					====================================================
+					*/
+					$categories = get_categories();
 
-			<?php
-			}	//endif;
-			/*
-			====================================================
-			Get all the categories and grab the first 3 posts
-			====================================================
-			*/
-			$categories = get_categories();
+					foreach ( $categories as $category ) {
+						//var_dump($category);
+						$args = array(
+							'cat' => $category->term_id,
+							'post_type' => 'post',
+							'posts_per_page' => 3
+						);
+						$query = new WP_Query( $args );
+						//var_dump($query);
+						if ( $query->have_posts() ) { ?>
 
-			foreach ( $categories as $category ) {
-				//var_dump($category);
-				$args = array(
-					'cat' => $category->term_id,
-					'post_type' => 'post',
-					'posts_per_page' => 3
-				);
-				$query = new WP_Query( $args );
-				//var_dump($query);
-				if ( $query->have_posts() ) { ?>
-
-				    <section class="<?php echo $category->slug; ?> listing">
-				        <h2>Dernieres <?php echo $category->name; ?>:</h2>
-								<div class="row align-items-center">
-					        <?php while ( $query->have_posts() ) {
-
-					            $query->the_post();
-					            ?>
-											<div class="col-md-4">
-						            <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
-
-						                    <a href="<?php the_permalink(); ?>">
-						                        <?php
-																		if ( has_post_thumbnail() ){
-																		 	the_post_thumbnail( 'medium' ); //Medium is 300x300
-																		}else{
-																			//default image
-																			$defaultImageUri = get_template_directory_uri().'/img/image_non_disponible.png';
-																			echo '<img src="'.$defaultImageUri.'" />';
-																		}
-
-																		 ?>
-						                    </a>
+						    <section class="<?php echo $category->slug; ?> listing">
+						        <h2>Dernieres <?php echo $category->name; ?>:</h2>
+										<div class="row  justify-content-center">
+							        <?php while ( $query->have_posts() ) {
+												$postCount =  $query->post_count;
+												if($postCount >2){
+													$mdClass = "col-md-4";
+												}elseif ($postCount = 2) {
+													$mdClass = "col-md-6";
+												}else{
+													$mdClass = "col-md-8";
+												}
+							            $query->the_post();
+							            ?>
 
 
-						                <h3 class="entry-title">
-						                    <a href="<?php the_permalink(); ?>">
-						                        <?php the_title(); ?>
-						                    </a>
-						                </h3>
+													<div class="<?=$mdClass?>">
+								            <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
+															<h3 class="entry-title">
+																	<a href="<?php the_permalink(); ?>">
+																			<?php the_title(); ?>
+																	</a>
+															</h3>
+															<div class="index_article_post_image">
+																<a href="<?php the_permalink(); ?>">
+																<?php
+																if ( has_post_thumbnail() ){
+																	if($postCount >2){
+																		the_post_thumbnail( 'medium' ); //Medium is 300x300
+																	}else{
+																		the_post_thumbnail( array(500,300) );
+																	}//end $postCount image size
+																}else{
+																	//default image
+																	$defaultImageUri = get_template_directory_uri().'/img/image_non_disponible.png';
+																	echo '<img src="'.$defaultImageUri.'" />';
+																}
 
-						                <?php the_excerpt(  ); ?>
+																?>
+																</a>
+															</div>
 
-						            </article>
-											</div>
 
-					        <?php } // end while ?>
-								</div>
 
-				    </section>
+								                <?php the_excerpt(  ); ?>
 
-				<?php } // end if
+								            </article>
+													</div>
 
-				// Use reset to restore original query.
-				wp_reset_postdata();
-				echo('<hr>');
-			} //end foreach categories
+							        <?php } // end while ?>
+										</div>
 
-		} //endif; ?>
+						    </section>
+
+						<?php } // end if
+
+						// Use reset to restore original query.
+						wp_reset_postdata();
+						echo('<hr>');
+					} //end foreach categories
+
+				} //endif; ?>
+			</section><!-- end container section  -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
