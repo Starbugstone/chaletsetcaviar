@@ -71,7 +71,6 @@ Carousel
 .carousel-caption h2, .carousel-caption p{
   font-weight: bold;
   -webkit-text-stroke: 1px black;
-  text-stroke: 1px black;
   /*WARNING, This is still experemental
   It is only used to make text a bit easier to read on light background
   Might have to make the text a bit bigger

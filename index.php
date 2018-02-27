@@ -103,11 +103,20 @@ get_header(); ?>
 					            ?>
 											<div class="col-md-4">
 						            <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
-						                <?php if ( has_post_thumbnail() ) { ?>
+
 						                    <a href="<?php the_permalink(); ?>">
-						                        <?php the_post_thumbnail( 'medium' ); //Medium is 300x300 ?>
+						                        <?php
+																		if ( has_post_thumbnail() ){
+																		 	the_post_thumbnail( 'medium' ); //Medium is 300x300
+																		}else{
+																			//default image
+																			$defaultImageUri = get_template_directory_uri().'/img/image_non_disponible.png';
+																			echo '<img src="'.$defaultImageUri.'" />';
+																		}
+
+																		 ?>
 						                    </a>
-						                <?php } ?>
+
 
 						                <h3 class="entry-title">
 						                    <a href="<?php the_permalink(); ?>">
