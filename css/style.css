@@ -49,6 +49,10 @@ Navigation
   font-size: 1.3rem;
 }
 
+.menu-toggle{
+  float: right;
+}
+
 /*
 ==============================================
 Index page Articles
