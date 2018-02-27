@@ -38,6 +38,17 @@ Navigation
   padding-right: 25px;
 }
 
+#site-navigation .site-title{
+  float: left;
+  padding-top: 10px;
+  padding-left: 25px;
+}
+
+#site-navigation .site-title a, #site-navigation .site-title a:hover{
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
 /*
 ==============================================
 Index page Articles
