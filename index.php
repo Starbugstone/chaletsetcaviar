@@ -36,9 +36,6 @@ get_header(); ?>
 						$subtitle = get_theme_mod('carousel_image_subtitle_'.$i);
 
 						if($i ==1){
-							if ($image == null){
-								//get a default image
-							}
 							$carouselItemClass = 'carousel-item active';
 						}else{
 							$carouselItemClass = 'carousel-item';
@@ -70,6 +67,7 @@ get_header(); ?>
 					<span class="sr-only">Suivant</span>
 				</a>
 			</div>
+		</div>
 			<?php
 			/*
 			====================================================
