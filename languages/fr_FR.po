@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-27 20:25+0100\n"
+"PO-Revision-Date: 2018-02-28 08:16+0100\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.0.6\n"
 "Last-Translator: \n"
@@ -187,3 +187,8 @@ msgstr ""
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: index.php:99
+msgid "Last"
+msgstr "Dernieres"

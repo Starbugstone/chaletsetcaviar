@@ -95,7 +95,8 @@ get_header(); ?>
 						if ( $query->have_posts() ) { ?>
 
 						    <section class="<?php echo $category->slug; ?> listing">
-						        <h2>Dernieres <?php echo $category->name; ?>:</h2>
+						        <!--<h2>Dernieres <?php echo $category->name; ?>:</h2>-->
+										<h2><?php echo (__( 'Last', 'chaletsetcaviar' )." ". $category->name);?></h2>
 										<div class="row  justify-content-center">
 							        <?php while ( $query->have_posts() ) {
 												$postCount =  $query->post_count;

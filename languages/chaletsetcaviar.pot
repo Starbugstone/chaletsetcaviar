@@ -184,3 +184,8 @@ msgstr ""
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
+
+#: index.php:99
+#. translators: used between list items, there is a space after the comma
+msgid "Last"
+msgstr ""
