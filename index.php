@@ -24,31 +24,38 @@ get_header(); ?>
 			====================================================
 			*/
 			?>
+
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
 				<div class="carousel-inner" role="listbox">
-					<?php //Need to add a loop connected to customizer ?>
-					<!-- Slide One - Set the background image for this slide in the line below -->
-					<div class="carousel-item active" style="background-image: url('http://www.appartements-exception.com/wp-content/uploads/sites/2/2016/08/503160068.jpg')">
-						<div class="carousel-caption d-none d-md-block">
-							<h2>First Slide</h2>
-							<p>This is a description for the first slide.</p>
-						</div>
-					</div>
-					<!-- Slide Two - Set the background image for this slide in the line below -->
-					<div class="carousel-item" style="background-image: url('http://www.courchevel.com/images/upload/video_home/visuel_fin_home_amis_42.jpg')">
-						<div class="carousel-caption d-none d-md-block">
-							<h2>Second Slide</h2>
-							<p>This is a description for the second slide.</p>
-						</div>
-					</div>
-					<!-- Slide Three - Set the background image for this slide in the line below -->
-					<div class="carousel-item" style="background-image: url('https://holidaze.reslogic.com/photos/ff_dFRCO3.jpg')">
-						<div class="carousel-caption d-none d-md-block">
-							<h2>Third Slide</h2>
-							<p>This is a description for the third slide.</p>
-						</div>
-					</div>
-				</div>
+
+					<?php //Need to add a loop connected to customizer
+					for ($i=1; $i < 6; $i++) {
+						if($i ==1){
+							$carouselItemClass = 'carousel-item active';
+						}else{
+							$carouselItemClass = 'carousel-item';
+						}
+						$image = get_theme_mod('carousel_image_'.$i);
+						$title = get_theme_mod('carousel_image_title_'.$i);
+						$subtitle = get_theme_mod('carousel_image_subtitle_'.$i);
+						if($image != null){
+
+							?>
+							<div class="<?=$carouselItemClass?>" style="background-image: url('<?=$image?>')">
+								<div class="carousel-caption d-none d-md-block">
+									<h2><?=$title?></h2>
+									<p><?=$subtitle?></p>
+								</div>
+							</div>
+							<?php
+						}
+						//echo $image.'<br>';
+						$title = get_theme_mod('carousel_image_title_'.$i);
+						//echo $title.'<br><br>';
+					}//end For loop
+					?>
+
 				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">Precedent</span>
