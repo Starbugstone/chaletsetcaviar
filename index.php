@@ -31,14 +31,19 @@ get_header(); ?>
 
 					<?php //Need to add a loop connected to customizer
 					for ($i=1; $i < 6; $i++) {
+						$image = get_theme_mod('carousel_image_'.$i);
+						$title = get_theme_mod('carousel_image_title_'.$i);
+						$subtitle = get_theme_mod('carousel_image_subtitle_'.$i);
+
 						if($i ==1){
+							if ($image == null){
+								//get a default image
+							}
 							$carouselItemClass = 'carousel-item active';
 						}else{
 							$carouselItemClass = 'carousel-item';
 						}
-						$image = get_theme_mod('carousel_image_'.$i);
-						$title = get_theme_mod('carousel_image_title_'.$i);
-						$subtitle = get_theme_mod('carousel_image_subtitle_'.$i);
+
 						if($image != null){
 
 							?>
