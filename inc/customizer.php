@@ -50,11 +50,13 @@ function chaletsetcaviar_customize_register( $wp_customize ) {
 		$wp_customize->add_setting( 'carousel_image_title_'.$i , array(
 	    //'default'     => '#43C6E4',
 	    'transport'   => 'refresh',
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		) );
 
 		$wp_customize->add_setting( 'carousel_image_subtitle_'.$i , array(
 	    //'default'     => '#43C6E4',
 	    'transport'   => 'refresh',
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'image_control_'.$i, array(
