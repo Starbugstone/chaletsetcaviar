@@ -74,6 +74,17 @@ Index page Articles
   justify-content: center;
 }
 
+.index_article_post_image_link{
+  position: relative;
+}
+
+.overlayIcons{
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
 /*
 ==============================================
 Pages

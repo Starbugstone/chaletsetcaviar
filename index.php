@@ -132,7 +132,7 @@ get_header(); ?>
 																	</a>
 															</h3>
 															<div class="index_article_post_image">
-																<a href="<?php the_permalink(); ?>">
+																<a class="index_article_post_image_link" href="<?php the_permalink(); ?>">
 																<?php
 																if ( has_post_thumbnail() ){
 																	if($postCount >2){
@@ -147,6 +147,8 @@ get_header(); ?>
 																}
 
 																?>
+
+																<span class="overlayIcons"><img src="https://laliberteelectronique.com/wp-content/themes/storefront/img/logo-coup-de-coeur.png" width="35" height="35"></span>
 																</a>
 															</div>
 
