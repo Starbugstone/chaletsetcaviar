@@ -36,6 +36,9 @@ get_header(); ?>
 						$subtitle = get_theme_mod('carousel_image_subtitle_'.$i);
 
 						if($i ==1){
+							if ($image == null){
+								$image = get_template_directory_uri().'/img/default_carousel.jpg';
+							}
 							$carouselItemClass = 'carousel-item active';
 						}else{
 							$carouselItemClass = 'carousel-item';
@@ -71,7 +74,7 @@ get_header(); ?>
 			<?php
 			/*
 			====================================================
-			Testing the Carrousel, need to WORDPRESS IT
+			End of the carousel
 			====================================================
 			*/
 			?>
@@ -133,9 +136,9 @@ get_header(); ?>
 																<?php
 																if ( has_post_thumbnail() ){
 																	if($postCount >2){
-																		the_post_thumbnail( 'medium' ); //Medium is 300x300
+																		the_post_thumbnail( array(400,300), array('alt' => esc_attr( get_the_title() )  ) );
 																	}else{
-																		the_post_thumbnail( array(500,300) );
+																		the_post_thumbnail( array(500,300), array('alt' => esc_attr( get_the_title() ) ) );
 																	}//end $postCount image size
 																}else{
 																	//default image

@@ -37,7 +37,7 @@ function chaletsetcaviar_customize_register( $wp_customize ) {
 	//
 	for ($i=1; $i < 6; $i++) {
 		if($i == 1){
-			$defaultCarouselImage = get_template_directory_uri().'/img/image_non_disponible.png';
+			$defaultCarouselImage = get_template_directory_uri().'/img/default_carousel.jpg';
 			//echo($defaultCarouselImage);
 		}else{
 			$defaultCarouselImage = '';

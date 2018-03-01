@@ -14,9 +14,3 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 if ( is_plugin_inactive('advanced-custom-fields/acf.php') ) {
     add_action( 'admin_notices', 'chaletsetcaviar_requirement_admin_notice' );
 }
-
-//link user to Plugins Manager page to activate required plugin
-include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-if ( basename( $_SERVER['PHP_SELF']) !== "plugins.php" ) { ?>
-    <p><?php _e( 'Apres installation, allez à <a href="'.get_admin_url().'plugins.php">Extensions</a> pour activer.', 'chaletsetcaviar' ); ?></p>
-<?php } ?>
