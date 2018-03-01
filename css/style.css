@@ -49,7 +49,11 @@ Navigation
   font-size: 1.3rem;
 }
 
-.menu-toggle{
+#site-navigation button.menu-toggle{
+  margin: 2px;
+}
+
+#site-navigation .menu-toggle{
   float: right;
 }
 
