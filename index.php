@@ -148,7 +148,8 @@ get_header(); ?>
 
 																?>
 
-																<span class="overlayIcons"><img src="https://laliberteelectronique.com/wp-content/themes/storefront/img/logo-coup-de-coeur.png" width="35" height="35"></span>
+																<span class="overlayIcons coup_de_coeur"><img src="<?php echo (get_template_directory_uri().'/img/coup_de_coeur.png'); ?>"></span>
+																<span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>"></span>
 																</a>
 															</div>
 

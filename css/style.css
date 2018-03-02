@@ -80,9 +80,15 @@ Index page Articles
 
 .overlayIcons{
   position: absolute;
-  bottom: 0;
-  padding-bottom: 5px;
-  padding-left: 5px;
+}
+
+.coup_de_coeur{
+  bottom: 10px;
+  right: 10px;
+}
+
+.vendu{
+  top: 0;
 }
 
 /*
