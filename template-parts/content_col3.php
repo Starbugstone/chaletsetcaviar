@@ -11,11 +11,11 @@
 
 <div class="col-md-4">
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
-    <h3 class="entry-title">
+    <h2 class="entry-title">
         <a href="<?php the_permalink(); ?>">
             <?php the_title(); ?>
         </a>
-    </h3>
+    </h2>
     <div class="index_article_post_image">
       <a class="index_article_post_image_link" href="<?php the_permalink(); ?>">
       <?php

@@ -34,7 +34,7 @@ get_header(); ?>
 
 				?>
 			</header><!-- .page-header -->
-			<section class="container-fluid">
+			<div class="container-fluid">
 				<div class="row">
 					<?php
 					/* Start the Loop */
@@ -50,7 +50,7 @@ get_header(); ?>
 					endwhile;
 					?>
 				</div>
-			</section>
+			</div>
 			<?php
 			//the_posts_navigation();
 
