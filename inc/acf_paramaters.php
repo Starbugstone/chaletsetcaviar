@@ -43,4 +43,48 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
+  	register_field_group(array (
+  		'id' => 'acf_options-des-categories',
+  		'title' => 'Options des categories',
+  		'fields' => array (
+  			array (
+  				'key' => 'field_5a99357eed63f',
+  				'label' => 'Image d\'entete',
+  				'name' => 'image_dentete',
+  				'type' => 'image',
+  				'instructions' => 'Choisir l\'image pour l\'entete de la page.',
+  				'required' => 1,
+  				'save_format' => 'url',
+  				'preview_size' => 'full',
+  				'library' => 'all',
+  			),
+  		),
+  		'location' => array (
+  			array (
+  				array (
+  					'param' => 'ef_taxonomy',
+  					'operator' => '==',
+  					'value' => 'category',
+  					'order_no' => 0,
+  					'group_no' => 0,
+  				),
+  			),
+  		),
+  		'options' => array (
+  			'position' => 'normal',
+  			'layout' => 'no_box',
+  			'hide_on_screen' => array (
+  			),
+  		),
+  		'menu_order' => 0,
+  	));
+
 }
+
+
+//Hide the ACF Menu, not needed by client. We just use the functionality.
+function remove_acf_menu() {
+	remove_menu_page('edit.php?post_type=acf');
+}
+//add_action( 'admin_menu', 'remove_acf_menu', 999);;
