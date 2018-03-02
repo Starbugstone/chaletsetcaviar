@@ -42,6 +42,9 @@ Navigation
   float: left;
   padding-top: 10px;
   padding-left: 25px;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 #site-navigation .site-title a, #site-navigation .site-title a:hover{
