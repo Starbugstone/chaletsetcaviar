@@ -14,7 +14,16 @@ get_header(); ?>
 
 		<?php
 		if ( have_posts() ) :
+			// get the current taxonomy term
+			$term = get_queried_object();
 
+			//set default background image
+			$backgroundImage = get_template_directory_uri().'/img/default_header.jpg';
+
+			//update with ACF field
+			if(get_field('image_dentete', $term)){
+				$backgroundImage = get_field('image_dentete', $term);
+			}
 			?>
 
 			<header class="page-header">
