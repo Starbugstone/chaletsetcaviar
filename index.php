@@ -97,19 +97,17 @@ get_header(); ?>
 					$categories = get_categories();
 
 					foreach ( $categories as $category ) {
-						//var_dump($category);
 						$args = array(
 							'cat' => $category->term_id,
 							'post_type' => 'post',
 							'posts_per_page' => 3
 						);
 						$query = new WP_Query( $args );
-						//var_dump($query);
 						if ( $query->have_posts() ) { ?>
 
 						    <section class="<?php echo $category->slug; ?> listing">
 						        <!--<h2>Dernieres <?php echo $category->name; ?>:</h2>-->
-										<h2><?php echo (__( 'Last', 'chaletsetcaviar' )." ". $category->name);?></h2>
+										<h2><a href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>"><?php echo (__( 'Last', 'chaletsetcaviar' )." ". $category->name);?></a></h2>
 										<div class="row  justify-content-center">
 							        <?php while ( $query->have_posts() ) {
 												$postCount =  $query->post_count;
