@@ -13,12 +13,25 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 		<?php
-		if ( have_posts() ) : ?>
+		if ( have_posts() ) :
+			// get the current taxonomy term
+			$term = get_queried_object();
+
+			//set default background image
+			$backgroundImage = get_template_directory_uri().'/img/default_header.jpg';
+
+			//update with ACF field
+			if(get_field('image_dentete', $term)){
+				$backgroundImage = get_field('image_dentete', $term);
+			}
+			?>
 
 			<header class="page-header">
+				<div class="full_bg_image" style="background-image: url('<?=$backgroundImage?>');"></div>
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
+
 				?>
 			</header><!-- .page-header -->
 

@@ -80,9 +80,12 @@ if ( ! function_exists( 'chaletsetcaviar_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+
 	}
 endif;
 add_action( 'after_setup_theme', 'chaletsetcaviar_setup' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -113,7 +116,6 @@ function chaletsetcaviar_scripts() {
 	wp_enqueue_script( 'chaletsetcaviar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'pooper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', false, '1.12.9', true ); // register the pooper js for BS
-	//wp_enqueue_script('pooper');
 
 	wp_enqueue_script( 'chaletsetcaviar-bs-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), '4.0.0', true ); //And register the BS
 
@@ -146,7 +148,9 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  *Needed Plugins.
  */
-require get_template_directory() . '/inc/required-plugins.php';
+//require get_template_directory() . '/inc/required-plugins.php'; EDIT - Included directly into the theme
+include_once('advanced-custom-fields/acf.php');
+require get_template_directory() . '/inc/acf_paramaters.php';
 
 /**
  * Load Jetpack compatibility file.

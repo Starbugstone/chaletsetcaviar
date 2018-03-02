@@ -42,6 +42,9 @@ Navigation
   float: left;
   padding-top: 10px;
   padding-left: 25px;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 #site-navigation .site-title a, #site-navigation .site-title a:hover{
@@ -74,13 +77,37 @@ Index page Articles
   justify-content: center;
 }
 
+.index_article_post_image_link{
+  position: relative;
+}
+
+.overlayIcons{
+  position: absolute;
+}
+
+.coup_de_coeur{
+  bottom: 10px;
+  right: 10px;
+}
+
+.vendu{
+  top: 0;
+}
+
 /*
 ==============================================
 Pages
 ==============================================
 */
+.full_bg_image{
+  min-height: 400px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+
 .content-area {
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .main-content-area {
