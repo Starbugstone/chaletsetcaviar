@@ -153,13 +153,13 @@ get_header(); ?>
 																*/
 																if(get_field('coup_de_coeur')){
 																	?>
-																	<span class="overlayIcons coup_de_coeur"><img src="<?php echo (get_template_directory_uri().'/img/coup_de_coeur.png'); ?>"></span>
+																	<span class="overlayIcons coup_de_coeur"><img src="<?php echo (get_template_directory_uri().'/img/coup_de_coeur.png'); ?>" alt="Coup de coeur"></span>
 																	<?php
 																}
 
 																if(get_field('vendu')){
 																	?>
-																	<span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>"></span>
+																	<span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>" alt="Produit Vendu"></span>
 																	<?php
 																}
 
