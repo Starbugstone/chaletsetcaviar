@@ -146,7 +146,9 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  *Needed Plugins.
  */
-require get_template_directory() . '/inc/required-plugins.php';
+//require get_template_directory() . '/inc/required-plugins.php'; EDIT - Included directly into the theme
+include_once('advanced-custom-fields/acf.php');
+require get_template_directory() . '/inc/acf_paramaters.php';
 
 /**
  * Load Jetpack compatibility file.

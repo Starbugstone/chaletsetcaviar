@@ -146,10 +146,27 @@ get_header(); ?>
 																	echo '<img src="'.$defaultImageUri.'" alt="Pas d\'image" />';
 																}
 
+																/*
+																=====================================
+																Gestion des Images additionnels
+																=====================================
+																*/
+																if(get_field('coup_de_coeur')){
+																	?>
+																	<span class="overlayIcons coup_de_coeur"><img src="<?php echo (get_template_directory_uri().'/img/coup_de_coeur.png'); ?>"></span>
+																	<?php
+																}
+
+																if(get_field('vendu')){
+																	?>
+																	<span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>"></span>
+																	<?php
+																}
+
 																?>
 
-																<span class="overlayIcons coup_de_coeur"><img src="<?php echo (get_template_directory_uri().'/img/coup_de_coeur.png'); ?>"></span>
-																<span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>"></span>
+
+
 																</a>
 															</div>
 
