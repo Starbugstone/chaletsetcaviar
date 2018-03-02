@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php
 			/*
 			====================================================
-			Testing the Carrousel, need to WORDPRESS IT
+			The Carrousel
 			====================================================
 			*/
 			?>
@@ -89,6 +89,7 @@ get_header(); ?>
 
 					<?php
 					}	//endif;
+
 					/*
 					====================================================
 					Get all the categories and grab the first 3 posts
@@ -146,7 +147,7 @@ get_header(); ?>
 
 																/*
 																=====================================
-																Gestion des Images additionnels
+																Get  additionnel Images
 																=====================================
 																*/
 																if(get_field('coup_de_coeur')){
@@ -160,15 +161,9 @@ get_header(); ?>
 																	<span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>" alt="Produit Vendu"></span>
 																	<?php
 																}
-
 																?>
-
-
-
 																</a>
 															</div>
-
-
 
 								                <?php the_excerpt(  ); ?>
 
