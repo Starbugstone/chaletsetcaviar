@@ -34,7 +34,7 @@
 			<?php
 			endif;
 			?>
-			<button class="menu-toggle btn-outline-secondary" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
+			<button class="menu-toggle btn-outline-secondary" aria-controls="primary-menu" aria-expanded="false"><span class="fa fa-bars"></span></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
