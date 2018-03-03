@@ -96,12 +96,14 @@ get_header(); ?>
 					====================================================
 					*/
 					$categories = get_categories();
+					$do_not_duplicate = array();  //empty array that we will fill to avoid duplicates
 
 					foreach ( $categories as $category ) {
 						$args = array(
 							'cat' => $category->term_id,
 							'post_type' => 'post',
-							'posts_per_page' => 3
+							'posts_per_page' => 3,
+							'post__not_in' => $do_not_duplicate
 						);
 						$query = new WP_Query( $args );
 						if ( $query->have_posts() ) { ?>
@@ -111,6 +113,7 @@ get_header(); ?>
 										<h2><a href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>"><?php echo (__( 'Last', 'chaletsetcaviar' )." ". $category->name);?></a></h2>
 										<div class="row  justify-content-center">
 							        <?php while ( $query->have_posts() ) {
+
 												$postCount =  $query->post_count;
 												if($postCount >2){
 													$mdClass = "col-md-4";
@@ -120,6 +123,8 @@ get_header(); ?>
 													$mdClass = "col-md-8";
 												}
 							            $query->the_post();
+													$do_not_duplicate[] = get_the_ID(); //store the ID of each post into the array. this post will no longer apear in the other sections
+													//var_dump($do_not_duplicate);
 							            ?>
 
 
@@ -179,7 +184,7 @@ get_header(); ?>
 
 						// Use reset to restore original query.
 						wp_reset_postdata();
-						echo('<hr>');
+						//echo('<hr>');
 					} //end foreach categories
 
 				} //endif; ?>
