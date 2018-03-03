@@ -9,6 +9,8 @@
  * @package Chalets_et_caviar
  */
 
+//Load icon Functions
+require get_template_directory() . '/inc/showIcons.php';
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

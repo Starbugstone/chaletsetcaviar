@@ -139,3 +139,17 @@ Carousel
   Might have to make the text a bit bigger
   */
 }
+
+/*
+==============================================
+Rent icons
+==============================================
+*/
+.rentIcons{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.rentIcons>span{
+  padding-right: 10px;
+}

@@ -95,6 +95,8 @@ get_header(); ?>
 					Get all the categories and grab the first 3 posts
 					====================================================
 					*/
+
+
 					$categories = get_categories();
 					$do_not_duplicate = array();  //empty array that we will fill to avoid duplicates
 
@@ -166,11 +168,27 @@ get_header(); ?>
 																	<span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>" alt="Produit Vendu"></span>
 																	<?php
 																}
+
 																?>
 																</a>
 															</div>
+								                <?php
+																//grab the rent icons
+																$icons = get_field('icones');
+																if($icons){
+																	?>
+																	<p class="rentIcons">
+																		<?php
+																	  foreach ($icons as $icon) {
+																	    echo getIcon($icon);
+																	  }
+																		?>
+																	</p>
+																<?php
+															} // End if icons
+																?>
 
-								                <?php the_excerpt(  ); ?>
+																<?php the_excerpt(  ); ?>
 
 								            </article>
 													</div>
@@ -179,7 +197,7 @@ get_header(); ?>
 										</div>
 
 						    </section>
-
+								<hr />
 						<?php } // end if
 
 						// Use reset to restore original query.

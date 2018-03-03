@@ -46,8 +46,22 @@
       ?>
       </a>
     </div>
-
-      <?php the_excerpt(  ); ?>
+    <?php
+    //grab the rent icons
+    $icons = get_field('icones');
+    if($icons){
+      ?>
+      <p class="rentIcons">
+        <?php
+        foreach ($icons as $icon) {
+          echo getIcon($icon);
+        }
+        ?>
+      </p>
+    <?php
+  } // End if icons
+  ?>
+  <?php the_excerpt(  ); ?>
 
   </article>
 </div>
