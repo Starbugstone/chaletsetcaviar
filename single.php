@@ -18,7 +18,9 @@ get_header(); ?>
 					?>
 					<div class="col-md-4">
 				    <?php
+						//grab the image
 						get_template_part( 'template-parts/article_image');
+						//Get the legal stuff
 						$typeOfProperty = get_field('type_de_bien');
 				    if($typeOfProperty == 'rent'){
 				      get_template_part( 'template-parts/acf_rent');
@@ -57,13 +59,13 @@ get_header(); ?>
 
 					</div>
 					<?php
-						get_template_part( 'template-parts/content', get_post_type() );
+						/*get_template_part( 'template-parts/content', get_post_type() );
 
 						the_post_navigation();
 						// If comments are open or we have at least one comment, load up the comment template.
 						if ( comments_open() || get_comments_number() ) :
 							comments_template();
-						endif;
+						endif;*/
 
 					endwhile; // End of the loop.
 					?>
@@ -75,5 +77,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
