@@ -10,3 +10,12 @@ if($sellPrice){
   </p>
   <?php
 }
+
+$surface = get_field('surface');
+if($surface){
+  ?>
+  <p class="propertySurface">
+    Surface : <?=$surface?> m²
+  </p>
+  <?php
+}

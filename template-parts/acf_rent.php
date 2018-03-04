@@ -1,15 +1,4 @@
 <?php
-//Grab the price
-$rentPrice = get_field('prix_par_semaine');
-if($rentPrice){
-  $rentPrice = number_format($rentPrice,2,","," ");
-  ?>
-  <p class="propertyPrice">
-    Prix par semaine : <?=$rentPrice?> Euros Charges Comprises
-  </p>
-  <?php
-}
-
 
 //grab the rent icons
 $icons = get_field('icones');
@@ -24,3 +13,24 @@ if($icons){
   </p>
 <?php
 } // End if icons
+
+
+//Grab the price
+$rentPrice = get_field('prix_par_semaine');
+if($rentPrice){
+  $rentPrice = number_format($rentPrice,2,","," ");
+  ?>
+  <p class="propertyPrice">
+    Prix par semaine : <?=$rentPrice?> Euros Charges Comprises
+  </p>
+  <?php
+}
+
+$surface = get_field('surface');
+if($surface){
+  ?>
+  <p class="propertySurface">
+    Surface : <?=$surface?> m²
+  </p>
+  <?php
+}
