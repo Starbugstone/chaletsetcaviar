@@ -25,12 +25,22 @@ if($rentPrice){
   </p>
   <?php
 }
+if(is_single()){
+  $surface = get_field('surface');
+  if($surface){
+    ?>
+    <p class="propertySurface">
+      Surface : <?=$surface?> m²
+    </p>
+    <?php
+  }
 
-$surface = get_field('surface');
-if($surface){
-  ?>
-  <p class="propertySurface">
-    Surface : <?=$surface?> m²
-  </p>
-  <?php
+  $nombre_de_personnes = get_field('nombre_de_personnes');
+  if($nombre_de_personnes){
+    ?>
+    <p class="nombre_de_personnes">
+      Nombre de personnes : <?=$nombre_de_personnes?> m²
+    </p>
+    <?php
+  }
 }

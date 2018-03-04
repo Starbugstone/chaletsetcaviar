@@ -91,7 +91,7 @@ if(function_exists("register_field_group"))
 				'label' => 'Type de bien',
 				'name' => 'type_de_bien',
 				'type' => 'radio',
-				'instructions' => 'Choisir le type de categorie pour debloquer des options suplementaires',
+				'instructions' => 'Choisir le type du bien pour debloquer des options suplementaires',
 				'required' => 1,
 				'choices' => array (
 					'rent' => 'Location',
