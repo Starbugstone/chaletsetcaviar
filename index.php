@@ -132,7 +132,7 @@ get_header(); ?>
 
 													<div class="<?=$mdClass?>">
 														<?php
-								            get_template_part( 'template-parts/content_col', get_post_format() );
+								            get_template_part( 'template-parts/content_col');
 														?>
 													</div>
 

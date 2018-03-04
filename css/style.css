@@ -153,3 +153,12 @@ Rent icons
 .rentIcons>span{
   padding-right: 10px;
 }
+
+/*
+==============================================
+Single posts
+==============================================
+*/
+.singlePost{
+  margin-top: 150px;
+}
