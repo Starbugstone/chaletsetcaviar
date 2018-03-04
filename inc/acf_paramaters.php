@@ -27,8 +27,8 @@ if(function_exists("register_field_group"))
 			),
 		),
 		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
+			'position' => 'side',
+			'layout' => 'default',
 			'hide_on_screen' => array (
 			),
 		),
@@ -94,13 +94,13 @@ if(function_exists("register_field_group"))
 				'instructions' => 'Choisir le type de categorie pour debloquer des options suplementaires',
 				'required' => 1,
 				'choices' => array (
-					'Location' => 'Location',
-					'Vente' => 'Vente',
-					'Autres' => 'Autres',
+					'rent' => 'Location',
+					'sell' => 'Vente',
+					'other' => 'Autres',
 				),
 				'other_choice' => 0,
 				'save_other_choice' => 0,
-				'default_value' => 'Autres',
+				'default_value' => 'other',
 				'layout' => 'vertical',
 			),
 			array (
@@ -115,12 +115,12 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Location',
+							'value' => 'rent',
 						),
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Vente',
+							'value' => 'sell',
 						),
 					),
 					'allorany' => 'any',
@@ -128,7 +128,7 @@ if(function_exists("register_field_group"))
 				'default_value' => '',
 				'placeholder' => '',
 				'prepend' => '',
-				'append' => '',
+				'append' => 'm²',
 				'min' => '',
 				'max' => '',
 				'step' => '',
@@ -145,7 +145,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Vente',
+							'value' => 'sell',
 						),
 					),
 					'allorany' => 'all',
@@ -153,7 +153,7 @@ if(function_exists("register_field_group"))
 				'default_value' => '',
 				'placeholder' => '',
 				'prepend' => 'Prix :',
-				'append' => '',
+				'append' => '€',
 				'min' => '',
 				'max' => '',
 				'step' => '',
@@ -170,7 +170,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Vente',
+							'value' => 'sell',
 						),
 					),
 					'allorany' => 'all',
@@ -200,7 +200,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Vente',
+							'value' => 'sell',
 						),
 					),
 					'allorany' => 'all',
@@ -230,7 +230,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Vente',
+							'value' => 'sell',
 						),
 					),
 					'allorany' => 'all',
@@ -243,7 +243,7 @@ if(function_exists("register_field_group"))
 				'max' => '',
 				'step' => '',
 			),
-			array (
+			/*array (
 				'key' => 'field_5a9aab16d90bc',
 				'label' => 'Type de bien',
 				'name' => 'type_de_bien',
@@ -255,7 +255,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Vente',
+							'value' => 'sell',
 						),
 					),
 					'allorany' => 'all',
@@ -263,14 +263,13 @@ if(function_exists("register_field_group"))
 				'choices' => array (
 					'Maison' => 'Maison',
 					'Appartement' => 'Appartement',
-					'Chalet' => 'Chalet',
 					'Autres' => 'Autres',
 				),
 				'other_choice' => 1,
-				'save_other_choice' => 1,
+				'save_other_choice' => 0,
 				'default_value' => '',
 				'layout' => 'horizontal',
-			),
+			),*/
 			array (
 				'key' => 'field_5a9a9830059b4',
 				'label' => 'Prix par semaine',
@@ -283,15 +282,15 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Location',
+							'value' => 'rent',
 						),
 					),
 					'allorany' => 'all',
 				),
 				'default_value' => '',
 				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
+				'prepend' => 'Prix :',
+				'append' => '€',
 				'min' => '',
 				'max' => '',
 				'step' => '',
@@ -308,7 +307,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Location',
+							'value' => 'rent',
 						),
 					),
 					'allorany' => 'all',
@@ -333,7 +332,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Location',
+							'value' => 'rent',
 						),
 					),
 					'allorany' => 'all',
@@ -361,7 +360,7 @@ if(function_exists("register_field_group"))
 						array (
 							'field' => 'field_5a9a956239d1f',
 							'operator' => '==',
-							'value' => 'Vente',
+							'value' => 'sell',
 						),
 					),
 					'allorany' => 'all',
@@ -390,6 +389,16 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+//Fix the decimal number problem
+//https://github.com/elliotcondon/acf/issues/553
+function acf_number_fix($value, $post_id, $field) {
+    if (is_admin()) {
+        $value = str_replace(",", ".", $value);
+    }
+    return $value;
+}
+add_filter('acf/load_value/type=number', 'acf_number_fix', 10, 3);
 
 //Hide the ACF Menu, not needed by client. We just use the functionality.
 function remove_acf_menu() {

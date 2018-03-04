@@ -126,71 +126,14 @@ get_header(); ?>
 												}
 							            $query->the_post();
 													$do_not_duplicate[] = get_the_ID(); //store the ID of each post into the array. this post will no longer apear in the other sections
-													//var_dump($do_not_duplicate);
+
 							            ?>
 
 
 													<div class="<?=$mdClass?>">
-								            <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
-															<h3 class="entry-title">
-																	<a href="<?php the_permalink(); ?>">
-																			<?php the_title(); ?>
-																	</a>
-															</h3>
-															<div class="index_article_post_image">
-																<a class="index_article_post_image_link" href="<?php the_permalink(); ?>">
-																<?php
-																if ( has_post_thumbnail() ){
-																	if($postCount >2){
-																		the_post_thumbnail( array(400,300), array('alt' => esc_attr( get_the_title() )  ) );
-																	}else{
-																		the_post_thumbnail( array(500,300), array('alt' => esc_attr( get_the_title() ) ) );
-																	}//end $postCount image size
-																}else{
-																	//default image
-																	$defaultImageUri = get_template_directory_uri().'/img/image_non_disponible.png';
-																	echo '<img src="'.$defaultImageUri.'" alt="Pas d\'image" />';
-																}
-
-																/*
-																=====================================
-																Get  additionnel Images
-																=====================================
-																*/
-																if(get_field('coup_de_coeur')){
-																	?>
-																	<span class="overlayIcons coup_de_coeur"><img src="<?php echo (get_template_directory_uri().'/img/coup_de_coeur.png'); ?>" alt="Coup de coeur"></span>
-																	<?php
-																}
-
-																if(get_field('vendu')){
-																	?>
-																	<span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>" alt="Produit Vendu"></span>
-																	<?php
-																}
-
-																?>
-																</a>
-															</div>
-								                <?php
-																//grab the rent icons
-																$icons = get_field('icones');
-																if($icons){
-																	?>
-																	<p class="rentIcons">
-																		<?php
-																	  foreach ($icons as $icon) {
-																	    echo getIcon($icon);
-																	  }
-																		?>
-																	</p>
-																<?php
-															} // End if icons
-																?>
-
-																<?php the_excerpt(  ); ?>
-
-								            </article>
+														<?php
+								            get_template_part( 'template-parts/content_col', get_post_format() );
+														?>
 													</div>
 
 							        <?php } // end while ?>

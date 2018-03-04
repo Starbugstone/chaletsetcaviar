@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="col-md-4">
+
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
     <h2 class="entry-title">
         <a href="<?php the_permalink(); ?>">
@@ -47,21 +47,17 @@
       </a>
     </div>
     <?php
-    //grab the rent icons
-    $icons = get_field('icones');
-    if($icons){
-      ?>
-      <p class="rentIcons">
-        <?php
-        foreach ($icons as $icon) {
-          echo getIcon($icon);
-        }
-        ?>
-      </p>
-    <?php
-  } // End if icons
+    // checking if sell or rent
+    $typeOfProperty = get_field('type_de_bien');
+    if($typeOfProperty == 'rent'){
+      get_template_part( 'template-parts/acf_rent');
+    }
+    if($typeOfProperty == 'sell'){
+      get_template_part( 'template-parts/acf_sell');
+    }
+
+
   ?>
   <?php the_excerpt(  ); ?>
 
   </article>
-</div>
