@@ -179,7 +179,9 @@ Single posts
 }
 
 #pageCarousel .carousel-item{
-  height: 300px;
-  /*height:auto;*/
-  min-height: 300px;
+  height: 400px;
+}
+
+#pageCarousel .carousel-control-prev-icon, #pageCarousel .carousel-control-next-icon{
+  background-color: rgba(0,0,0,0.7);
 }
