@@ -169,3 +169,11 @@ Single posts
   border-radius: 25px;
   margin-top:10px;
 }
+
+.carouselPostFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}

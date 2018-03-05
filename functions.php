@@ -95,7 +95,12 @@ function chaletsetcaviar_customFormatGallery($string,$attr){
 
     $output = '<div id="pageCarousel" class="carousel slide" data-ride="carousel">';
 		$output .= '<div class="carousel-inner" role="listbox">';
-    $posts = get_posts(array('include' => $attr['ids'],'post_type' => 'attachment'));
+    $posts = get_posts(array(
+			//'include' => $attr['ids'],
+			'post__in' => explode(',',$attr['ids']),
+			'orderby' => 'post__in',
+			'post_type' => 'attachment'
+		));
 		$i = 0;
     foreach($posts as $imagePost){
 			$i+=1;
@@ -104,21 +109,22 @@ function chaletsetcaviar_customFormatGallery($string,$attr){
 			}else{
 				$output .='<div class="carousel-item">';
 			}
-        $output .= '<img class=""d-block img-fluid" src="'.wp_get_attachment_image_src($imagePost->ID, $attr['size'])[0].'" />';
-        /*$output .= "<img src='".wp_get_attachment_image_src($imagePost->ID, 'medium')[0]."' data-media=\"(min-width: 400px)\">";
-        $output .= "<img src='".wp_get_attachment_image_src($imagePost->ID, 'large')[0]."' data-media=\"(min-width: 950px)\">";
-        $output .= "<img src='".wp_get_attachment_image_src($imagePost->ID, 'extralarge')[0]."' data-media=\"(min-width: 1200px)\">";*/
-				$output .="</div>";
+				$output .= '<div class="carouselPostFlex">';
+        	$output .= '<img class=""d-block img-fluid" src="'.wp_get_attachment_image_src($imagePost->ID, $attr['size'])[0].'" />';
+				$output .="</div><!-- End  carouselPostFlex -->";
+				$output .="</div><!-- End  carousel-item -->";
     }
 
-    $output .= '</div><a class="carousel-control-prev" href="#pageCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#pageCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a></div>';
+    $output .= '</div><!-- End carousel-inner -->
+		<a class="carousel-control-prev" href="#pageCarousel" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+  	</a>
+  	<a class="carousel-control-next" href="#pageCarousel" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+  	</a>
+		</div><!-- End carousel -->';
 
     return $output;
 }
