@@ -3,23 +3,23 @@
 function getIcon($i){
   $returniconHTML = geticonHtml('question', 'Option inconnu');
   switch($i){
-    case Wifi:
-      $returniconHTML = geticonHtml(wifi, 'Wifi');
+    case 'Wifi':
+      $returniconHTML = geticonHtml('wifi', 'Wifi');
       break;
-    case PMR:
-      $returniconHTML = geticonHtml(wheelchair, 'Acces PMR');
+    case 'PMR':
+      $returniconHTML = geticonHtml('wheelchair', 'Acces PMR');
       break;
-    case Animaux:
-      $returniconHTML = geticonHtml(paw, 'Animaux Admis');
+    case 'Animaux':
+      $returniconHTML = geticonHtml('paw', 'Animaux Admis');
       break;
-    case Television:
-      $returniconHTML = geticonHtml(television, 'Television');
+    case 'Television':
+      $returniconHTML = geticonHtml('television', 'Television');
       break;
-    case Parking:
-      $returniconHTML = geticonHtml(car, 'Parking');
+    case 'Parking':
+      $returniconHTML = geticonHtml('car', 'Parking');
       break;
-    case Restaurant:
-      $returniconHTML = geticonHtml(cutlery, 'Restaurant à proximité');
+    case 'Restaurant':
+      $returniconHTML = geticonHtml('cutlery', 'Restaurant à proximité');
       break;
   }
   return $returniconHTML;
