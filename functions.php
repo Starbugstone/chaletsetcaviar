@@ -83,8 +83,13 @@ if ( ! function_exists( 'chaletsetcaviar_setup' ) ) :
 
 
 	}
+
 endif;
 add_action( 'after_setup_theme', 'chaletsetcaviar_setup' );
+
+if ( function_exists( 'add_image_size' ) ) {
+	add_image_size( 'postCarousel', 600, 300,false );
+}
 
 /*
 *Overriding the gallery component from Wordpress to output a carousel gallery
@@ -92,7 +97,6 @@ add_action( 'after_setup_theme', 'chaletsetcaviar_setup' );
 add_filter('post_gallery','chaletsetcaviar_customFormatGallery',10,2);
 
 function chaletsetcaviar_customFormatGallery($string,$attr){
-
     $output = '<div id="pageCarousel" class="carousel slide" data-ride="carousel">';
 		$output .= '<div class="carousel-inner" role="listbox">';
     $posts = get_posts(array(
@@ -109,9 +113,9 @@ function chaletsetcaviar_customFormatGallery($string,$attr){
 			}else{
 				$output .='<div class="carousel-item">';
 			}
-				$output .= '<div class="carouselPostFlex">';
-        	$output .= '<img class=""d-block img-fluid" src="'.wp_get_attachment_image_src($imagePost->ID, $attr['size'])[0].'" />';
-				$output .="</div><!-- End  carouselPostFlex -->";
+				$output .= '<a class="carouselPostFlex" href="'.wp_get_attachment_image_src($imagePost->ID, 'full')[0].'" data-toggle="lightbox">';
+        $output .= '<img class=""d-block img-fluid" src="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[0].'" width="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[1].'" height="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[2].'" />';
+				$output .="</a><!-- End  carouselPostFlex -->";
 				$output .="</div><!-- End  carousel-item -->";
     }
 
@@ -139,6 +143,7 @@ function chaletsetcaviar_customFormatGallery($string,$attr){
  */
 function chaletsetcaviar_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'chaletsetcaviar_content_width', 1170 ); //--EDIT-- Max width of imported content default 640
+
 }
 add_action( 'after_setup_theme', 'chaletsetcaviar_content_width', 0 );
 
@@ -154,6 +159,8 @@ function chaletsetcaviar_scripts() {
 
 	wp_enqueue_style( 'chaletsetcaviar-fontawsome-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' ); //Font Awsome from CDN
 
+	wp_enqueue_style('chaletsetcaviar-ekko-lightbox-css', '//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css', array(), '5.3.0');
+
 	wp_enqueue_script( 'chaletsetcaviar-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'chaletsetcaviar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -161,6 +168,10 @@ function chaletsetcaviar_scripts() {
 	wp_enqueue_script( 'pooper', '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', false, '1.12.9', true ); // register the pooper js for BS
 
 	wp_enqueue_script( 'chaletsetcaviar-bs-js', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), '4.0.0', true ); //And register the BS
+
+	wp_enqueue_script('chaletsetcaviar-ekko-lightbox-js', '//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js', array('jquery'), '5.3.0');
+
+	wp_enqueue_script('chaletsetcaviar-script-js', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
