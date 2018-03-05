@@ -21,14 +21,19 @@ get_header(); ?>
 						//grab the image
 						get_template_part( 'template-parts/article_image');
 						//Get the legal stuff
-						$typeOfProperty = get_field('type_de_bien');
-				    if($typeOfProperty == 'rent'){
-				      get_template_part( 'template-parts/acf_rent');
-				    }
-				    if($typeOfProperty == 'sell'){
-				      get_template_part( 'template-parts/acf_sell');
-				    }
-
+						?>
+						<div class="sidebarDetails">
+							<?php
+							$typeOfProperty = get_field('type_de_bien');
+					    if($typeOfProperty == 'rent'){
+					      get_template_part( 'template-parts/acf_rent');
+					    }
+					    if($typeOfProperty == 'sell'){
+					      get_template_part( 'template-parts/acf_sell');
+					    }
+							?>
+					</div>
+						<?php
 						?>
 					</div>
 					<div class="col-md-8">

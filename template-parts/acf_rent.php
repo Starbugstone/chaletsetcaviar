@@ -21,7 +21,7 @@ if($rentPrice){
   $rentPrice = number_format($rentPrice,2,","," ");
   ?>
   <p class="propertyPrice">
-    Prix par semaine : <?=$rentPrice?> Euros Charges Comprises
+    Prix par semaine : <?=$rentPrice?> €
   </p>
   <?php
 }
@@ -39,7 +39,7 @@ if(is_single()){
   if($nombre_de_personnes){
     ?>
     <p class="nombre_de_personnes">
-      Nombre de personnes : <?=$nombre_de_personnes?> m²
+      Nombre de personnes : <?=$nombre_de_personnes?>
     </p>
     <?php
   }

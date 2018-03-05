@@ -1,5 +1,15 @@
 <div class="index_article_post_image">
-  <a class="index_article_post_image_link" href="<?php the_permalink(); ?>">
+  <?php
+  if(!is_single()){
+    ?>
+    <a class="index_article_post_image_link" href="<?php the_permalink(); ?>">
+    <?php
+  }else{
+    ?>
+    <p class="index_article_post_image_link">
+    <?php
+  }
+   ?>
   <?php
   if ( has_post_thumbnail() ){
       the_post_thumbnail( array(400,300), array('alt' => esc_attr( get_the_title() )  ) );
@@ -25,6 +35,15 @@
     <span class="overlayIcons vendu"><img src="<?php echo (get_template_directory_uri().'/img/vendu.png'); ?>" alt="Produit Vendu"></span>
     <?php
   }
-  ?>
+
+  if(!is_single()){
+    ?>
   </a>
+    <?php
+  }else{
+    ?>
+  </p>
+    <?php
+  }
+  ?>
 </div>
