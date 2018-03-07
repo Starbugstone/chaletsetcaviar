@@ -97,7 +97,11 @@ if ( function_exists( 'add_image_size' ) ) {
 add_filter('post_gallery','chaletsetcaviar_customFormatGallery',10,2);
 
 function chaletsetcaviar_customFormatGallery($string,$attr){
-    $output = '<div id="pageCarousel" class="carousel slide" data-ride="carousel">';
+	//creating a static instance to avoid the multiple galeries on page
+	static $instance = 0;
+	$instance++;
+
+    $output = '<div id="pageCarousel-'.$instance.'" class="carousel slide postCarouselContainer" data-ride="carousel">';
 		$output .= '<div class="carousel-inner" role="listbox">';
     $posts = get_posts(array(
 			//'include' => $attr['ids'],
@@ -120,11 +124,11 @@ function chaletsetcaviar_customFormatGallery($string,$attr){
     }
 
     $output .= '</div><!-- End carousel-inner -->
-		<a class="carousel-control-prev" href="#pageCarousel" role="button" data-slide="prev">
+		<a class="carousel-control-prev" href="#pageCarousel-'.$instance.'" role="button" data-slide="prev">
 	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 	    <span class="sr-only">Precedent</span>
   	</a>
-  	<a class="carousel-control-next" href="#pageCarousel" role="button" data-slide="next">
+  	<a class="carousel-control-next" href="#pageCarousel-'.$instance.'" role="button" data-slide="next">
     	<span class="carousel-control-next-icon" aria-hidden="true"></span>
     	<span class="sr-only">Suivant</span>
   	</a>

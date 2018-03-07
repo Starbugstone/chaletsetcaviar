@@ -190,7 +190,7 @@ Single posts
   height: 100%;
 }
 
-#pageCarousel{
+.postCarouselContainer{
   border: 1px solid;
   padding: 10px;
   border-radius: 10px;
@@ -199,10 +199,10 @@ Single posts
   background-color: #111;
 }
 
-#pageCarousel .carousel-item{
+.postCarouselContainer .carousel-item{
   height: 400px;
 }
 
-#pageCarousel .carousel-control-prev-icon, #pageCarousel .carousel-control-next-icon{
+.postCarouselContainer .carousel-control-prev-icon, #pageCarousel .carousel-control-next-icon{
   background-color: rgba(0,0,0,0.7);
 }
