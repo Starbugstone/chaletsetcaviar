@@ -67,8 +67,9 @@ Index page Articles
 */
 
 .entry-title{
-  text-align: center;
+  /* text-align: center; */
 }
+
 .index_article_post_image{
   min-height: 300px;
   max-height: 500px;
@@ -92,6 +93,17 @@ Index page Articles
 
 .vendu{
   top: 0;
+}
+
+section.listing>h2{
+  text-align: center;
+}
+
+.listing h2 a,
+.listing h2 a:hover,
+.listing h2 a:visited{
+  text-decoration: none;
+  color: #8d8d8d;
 }
 
 /*
@@ -160,7 +172,7 @@ Single posts
 ==============================================
 */
 .singlePost{
-  margin-top: 150px;
+  margin-top: 80px;
 }
 
 .sidebarDetails{
@@ -184,6 +196,7 @@ Single posts
   border-radius: 10px;
   margin-left: 25px;
   margin-right: 25px;
+  background-color: #111;
 }
 
 #pageCarousel .carousel-item{

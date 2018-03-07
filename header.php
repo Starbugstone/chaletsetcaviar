@@ -45,16 +45,23 @@ require get_template_directory() . '/inc/showIcons.php';
 				) );
 			?>
 		</nav><!-- #site-navigation -->
-		<div itemscope class="site-branding">
-			<?php
-			the_custom_logo();
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+		<?php
+		if ( is_front_page() && is_home() ) : ?>
+
+			<div itemscope class="site-branding">
+				<?php
+				the_custom_logo();
+
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif; ?>
+			</div><!-- .site-branding -->
+		<?php
+		endif;
+		?>
 
 
 	</header><!-- #masthead -->
