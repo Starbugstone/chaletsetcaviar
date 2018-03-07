@@ -35,7 +35,7 @@ get_header(); ?>
 							$category = get_the_category();
 
 							?>
-							<h2><a href="<?php echo get_category_link($category[0]->term_id); ?>">Retour au categorie</a></h2>
+							<p><a href="<?php echo get_category_link($category[0]->term_id); ?>">Retour au categorie</a></p>
 					</div>
 						<?php
 						?>
