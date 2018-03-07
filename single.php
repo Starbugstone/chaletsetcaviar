@@ -16,6 +16,7 @@ get_header(); ?>
 					<?php
 					while ( have_posts() ) : the_post();
 					?>
+
 					<div class="col-md-4">
 				    <?php
 						//grab the image
@@ -31,7 +32,10 @@ get_header(); ?>
 					    if($typeOfProperty == 'sell'){
 					      get_template_part( 'template-parts/acf_sell');
 					    }
+							$category = get_the_category();
+
 							?>
+							<h2><a href="<?php echo get_category_link($category[0]->term_id); ?>">Retour au categorie</a></h2>
 					</div>
 						<?php
 						?>
