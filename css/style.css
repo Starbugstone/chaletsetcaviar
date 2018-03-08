@@ -143,6 +143,11 @@ section.listing>h2{
 /*
 Styling for the container box on index
 */
+.postCol{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .category-listing{
   border: 1px solid #eee;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
