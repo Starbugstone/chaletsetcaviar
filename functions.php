@@ -118,7 +118,7 @@ function chaletsetcaviar_customFormatGallery($string,$attr){
 				$output .='<div class="carousel-item">';
 			}
 				$output .= '<a class="carouselPostFlex" href="'.wp_get_attachment_image_src($imagePost->ID, 'full')[0].'" data-toggle="lightbox">';
-        $output .= '<img class=""d-block img-fluid" src="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[0].'" width="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[1].'" height="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[2].'" />';
+        $output .= '<img class="d-block img-fluid" src="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[0].'" alt="'.$imagePost->post_title.'" width="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[1].'" height="'.wp_get_attachment_image_src($imagePost->ID, 'postCarousel')[2].'" />';
 				$output .="</a><!-- End  carouselPostFlex -->";
 				$output .="</div><!-- End  carousel-item -->";
     }

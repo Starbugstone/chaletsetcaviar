@@ -6,7 +6,7 @@
     <?php
   }else{
     ?>
-    <span class="index_article_post_image_link">
+    <div class="index_article_post_image_link">
     <?php
   }
    ?>
@@ -49,7 +49,7 @@
     <?php
   }else{
     ?>
-  </span>
+  </div>
     <?php
   }
   ?>
