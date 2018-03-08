@@ -2,7 +2,7 @@
   <?php
   if(!is_single()){
     ?>
-    <a class="index_article_post_image_link" href="<?php the_permalink(); ?>">
+    <a class="index_article_post_image_link hoverImage" href="<?php the_permalink(); ?>">
     <?php
   }else{
     ?>
