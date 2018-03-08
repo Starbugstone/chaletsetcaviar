@@ -11,14 +11,16 @@
 
 
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing' ); ?>>
+
+    <?php
+    get_template_part( 'template-parts/article_image');
+    ?>
     <h2 class="entry-title">
         <a href="<?php the_permalink(); ?>">
             <?php the_title(); ?>
         </a>
     </h2>
     <?php
-    get_template_part( 'template-parts/article_image');
-
     // checking if sell or rent
     $typeOfProperty = get_field('type_de_bien');
     if($typeOfProperty == 'rent'){
