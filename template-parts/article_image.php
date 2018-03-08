@@ -6,17 +6,24 @@
     <?php
   }else{
     ?>
-    <p class="index_article_post_image_link">
+    <span class="index_article_post_image_link">
     <?php
   }
    ?>
   <?php
-  if ( has_post_thumbnail() ){
-      the_post_thumbnail( array(400,300), array('alt' => esc_attr( get_the_title() )  ) );
-  }else{
-    //default image
-    $defaultImageUri = get_template_directory_uri().'/img/image_non_disponible.png';
-    echo '<img src="'.$defaultImageUri.'" alt="Pas d\'image" />';
+  if( function_exists('has_post_thumbnail') ){
+    if ( has_post_thumbnail() ){
+      $post_thumbnail_id = get_post_thumbnail_id();
+      $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+      //the_post_thumbnail( array(400,300), array('alt' => esc_attr( get_the_title() )  ) );
+      echo ('<div class="postThumbnail" style="background-image : url('.$post_thumbnail_url.')">');
+
+      echo ('</div>');
+    }else{
+      //default image
+      $defaultImageUri = get_template_directory_uri().'/img/image_non_disponible.png';
+      echo '<img src="'.$defaultImageUri.'" alt="Pas d\'image" />';
+    }
   }
 
   /*
@@ -42,7 +49,7 @@
     <?php
   }else{
     ?>
-  </p>
+  </span>
     <?php
   }
   ?>
