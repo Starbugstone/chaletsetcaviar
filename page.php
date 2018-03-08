@@ -17,13 +17,13 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="container-fluid singlePost">
-				<div class="row">
+				<div class="row justify-content-center">
 
 					<?php
 					while ( have_posts() ) : the_post();
 					?>
 
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+						<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-10 category-listing'); ?>>
 							<header class="entry-header">
 								<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 							</header><!-- .entry-header -->
