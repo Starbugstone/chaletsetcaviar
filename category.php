@@ -40,10 +40,10 @@ get_header(); ?>
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
 						?>
-						<div class="col-md-4 postCol">
+						<div class="col-12 my-2">
 							<?php
 
-							get_template_part( 'template-parts/content_col');
+							get_template_part( 'template-parts/content_line');
 							?>
 						</div>
 						<?php
