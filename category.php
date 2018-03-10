@@ -40,7 +40,7 @@ get_header(); ?>
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
 						?>
-						<div class="col-12 my-2">
+						<div class="col-12 my-2 px-md-5">
 							<?php
 
 							get_template_part( 'template-parts/content_line');
