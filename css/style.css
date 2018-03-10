@@ -31,6 +31,12 @@ Header
 
 }
 
+.searchIcon{
+  display: flex;
+  align-items: center;
+}
+
+
 /*
 ==============================================
 Navigation
@@ -76,6 +82,18 @@ Navigation
 
 #site-navigation .menu-toggle{
   float: right;
+}
+
+/*
+==============================================
+Footer
+==============================================
+*/
+
+.site-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /*

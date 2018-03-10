@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer pb-2">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'chaletsetcaviar' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
@@ -25,6 +25,9 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'chaletsetcaviar' ), 'chaletsetcaviar', '<a href="https://starbugstone.eu">StarbugStone</a>' );
 			?>
 		</div><!-- .site-info -->
+		<div class="col-4">
+			<?php get_search_form() ?>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
