@@ -77,6 +77,8 @@ get_header(); ?>
 			End of the carousel
 			====================================================
 			*/
+
+			get_search_form();
 			?>
 			<section class="container-fluid">
 				<?php
