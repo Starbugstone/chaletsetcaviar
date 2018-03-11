@@ -78,7 +78,6 @@ get_header(); ?>
 			====================================================
 			*/
 
-			get_search_form();
 			?>
 			<section class="container-fluid">
 				<?php
