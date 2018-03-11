@@ -15,14 +15,11 @@
     if ( has_post_thumbnail() ){
       $post_thumbnail_id = get_post_thumbnail_id();
       $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-      //the_post_thumbnail( array(400,300), array('alt' => esc_attr( get_the_title() )  ) );
-      echo ('<div class="postThumbnail" style="background-image : url('.$post_thumbnail_url.')">');
-
-      echo ('</div>');
+      echo ('<div class="postThumbnail" style="background-image : url('.$post_thumbnail_url.')"></div>');
     }else{
       //default image
-      $defaultImageUri = get_template_directory_uri().'/img/image_non_disponible.png';
-      echo '<img src="'.$defaultImageUri.'" alt="Pas d\'image" />';
+      $defaultImageUri = get_template_directory_uri().'/img/noImage.jpg';
+      echo ('<div class="postThumbnail" style="background-image : url('.$defaultImageUri.')"></div>');
     }
   }
 
