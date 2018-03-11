@@ -39,7 +39,7 @@ Header
 a.custom-logo-link, a.custom-logo-link:hover, a.custom-logo-link:focus, a.custom-logo-link:active, a.custom-logo-link:visited{
   text-decoration: none;
   outline: 0;
-  
+
 }
 
 
@@ -294,4 +294,24 @@ Single posts
 
 .postCarouselContainer .carousel-control-prev-icon, #pageCarousel .carousel-control-next-icon{
   background-color: rgba(0,0,0,0.7);
+}
+
+.returnToCategory{
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.returnToCategory a, .returnToCategory a:visited, .returnToCategory a:focus, .returnToCategory a:active{
+  text-decoration: none;
+  color: #8d8d8d;
+}
+
+.editLink{
+  position: fixed;
+  top: 100px;
+  right: 0;
+}
+.editLink a{
+  color: antiquewhite;
 }

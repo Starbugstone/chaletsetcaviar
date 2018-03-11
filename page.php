@@ -40,29 +40,6 @@ get_header(); ?>
 									) );
 								?>
 							</div><!-- .entry-content -->
-
-							<?php if ( get_edit_post_link() ) : ?>
-								<footer class="entry-footer">
-									<?php
-										edit_post_link(
-											sprintf(
-												wp_kses(
-													/* translators: %s: Name of current post. Only visible to screen readers */
-													__( 'Edit <span class="screen-reader-text">%s</span>', 'chaletsetcaviar' ),
-													array(
-														'span' => array(
-															'class' => array(),
-														),
-													)
-												),
-												get_the_title()
-											),
-											'<span class="edit-link">',
-											'</span>'
-										);
-									?>
-								</footer><!-- .entry-footer -->
-							<?php endif; ?>
 						</article><!-- #post-<?php the_ID(); ?> -->
 					<?php
 						//get_template_part( 'template-parts/content', 'page' );
@@ -82,7 +59,14 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	<?php // Edit Link
+	if ( get_edit_post_link() ) : ?>
+		<div class="editLink">
+			<a href="<?php get_edit_post_link(); ?>" class="btn btn-dark">
+				Editer le post
+			</a>
+		</div><!-- .editLink -->
+	<?php endif; ?>
 <?php
 //get_sidebar();
 get_footer();

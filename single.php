@@ -33,9 +33,8 @@ get_header(); ?>
 					      get_template_part( 'template-parts/acf_sell');
 					    }
 							$category = get_the_category();
-
 							?>
-							<p><a href="<?php echo get_category_link($category[0]->term_id); ?>">Retour au categorie</a></p>
+							<p class="returnToCategory"><a href="<?php echo get_category_link($category[0]->term_id); ?>">Autres <?=$category[0]->name?></a></p>
 					</div>
 						<?php
 						?>
@@ -79,35 +78,19 @@ get_header(); ?>
 					endwhile; // End of the loop.
 					?>
 				</div><!-- End Row -->
-				<?php // Edit Link 
-				if ( get_edit_post_link() ) : ?>
-					<div class="entry-footer">
-						<?php
-							edit_post_link(
-								sprintf(
-									wp_kses(
-										/* translators: %s: Name of current post. Only visible to screen readers */
-										__( 'Edit <span class="screen-reader-text">%s</span>', 'chaletsetcaviar' ),
-										array(
-											'span' => array(
-												'class' => array(),
-											),
-										)
-									),
-									get_the_title()
-								),
-								'<span class="edit-link">',
-								'</span>'
-							);
-						?>
-					</div><!-- .entry-footer -->
-				<?php endif; ?>
 			</div> <!-- End Container-fluid -->
 
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	<?php // Edit Link
+	if ( get_edit_post_link() ) : ?>
+		<div class="editLink">
+			<a href="<?php get_edit_post_link(); ?>" class="btn btn-dark">
+				Editer le post
+			</a>
+		</div><!-- .editLink -->
+	<?php endif; ?>
 <?php
 //get_sidebar();
 get_footer();
