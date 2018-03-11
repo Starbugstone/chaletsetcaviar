@@ -13,34 +13,50 @@ if($icons){
   </p>
 <?php
 } // End if icons
-
-
+?>
+<div class="row">
+<?php
 //Grab the price
 $rentPrice = get_field('prix_par_semaine');
 if($rentPrice){
   $rentPrice = number_format($rentPrice,2,","," ");
+  $iconLogo = get_template_directory_uri().'/img/icons/money.png';
   ?>
-  <p class="propertyPrice">
-    Prix par semaine : <?=$rentPrice?> €
-  </p>
+  <div class="col-lg-4 col-md-6 text-center">
+    <img src="<?=$iconLogo?>" alt="prix" title="Prix par semaine" />
+
+    <p class="propertyPrice">
+      <?=$rentPrice?> € / Sem
+    </p>
+  </div>
   <?php
 }
-if(is_single()){
+//if(is_single()){
   $surface = get_field('surface');
   if($surface){
+    $iconLogo = get_template_directory_uri().'/img/icons/surface.svg';
     ?>
-    <p class="propertySurface">
-      Surface : <?=$surface?> m²
-    </p>
+    <div class="col-lg-4 col-md-6 text-center">
+      <img src="<?=$iconLogo?>" alt="Surface" title="Surface" />
+      <p class="propertySurface">
+        <?=$surface?> m²
+      </p>
+    </div>
     <?php
   }
 
   $nombre_de_personnes = get_field('nombre_de_personnes');
   if($nombre_de_personnes){
+    $iconLogo = get_template_directory_uri().'/img/icons/personnes.svg';
     ?>
-    <p class="nombre_de_personnes">
-      Nombre de personnes : <?=$nombre_de_personnes?>
-    </p>
+    <div class="col-lg-4 col-md-6 text-center">
+      <img src="<?=$iconLogo?>" alt="Surface" title="Surface" />
+      <p class="nombre_de_personnes">
+        <?=$nombre_de_personnes?> Personnes
+      </p>
+    </div>
     <?php
   }
-}
+//}
+?>
+</div>
