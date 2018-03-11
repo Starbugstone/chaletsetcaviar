@@ -167,10 +167,6 @@ section.listing>h2{
 /*
 Styling for the container box on index
 */
-.postCol{
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
 
 .category-listing{
   border: 1px solid #eee;
@@ -266,9 +262,7 @@ Single posts
 
 .sidebarDetails{
   border: 1px solid black;
-  padding: 5px 10px 5px 10px;
   border-radius: 25px;
-  margin-top:10px;
 }
 
 .carouselPostFlex{
@@ -283,8 +277,6 @@ Single posts
   border: 1px solid;
   padding: 10px;
   border-radius: 10px;
-  margin-left: 25px;
-  margin-right: 25px;
   background-color: #111;
 }
 

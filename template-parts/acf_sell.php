@@ -10,7 +10,7 @@
     <div class="col-lg-4 col-md-6 text-center">
       <img src="<?=$iconLogo?>" alt="prix" title="Prix de vente" />
       <p class="propertyPrice">
-        <?=$sellPrice?> Euros
+        <?=$sellPrice?> €
       </p>
     </div>
     <?php

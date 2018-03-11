@@ -11,7 +11,7 @@
 
 
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing hoverLine postArticle' ); ?> data-post-link="<?php the_permalink(); ?>">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center no-gutters">
       <div class="col-md-10 text-center">
         <h2 class="entry-title">
             <a href="<?php the_permalink(); ?>">
@@ -21,13 +21,13 @@
       </div>
     </div>
 
-    <div class="row align-items-center">
+    <div class="row align-items-center no-gutters">
       <div class="col-md-3">
         <?php
         get_template_part( 'template-parts/article_image');
         ?>
       </div>
-      <div class="col-md-4 text-center">
+      <div class="col-md-4 px-2 text-center">
         <?php
         // checking if sell or rent
         $typeOfProperty = get_field('type_de_bien');
@@ -39,7 +39,7 @@
         }
         ?>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 pr-2 text-justify ">
         <?php the_excerpt(  ); ?>
       </div>
     </div>

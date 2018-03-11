@@ -126,7 +126,7 @@ get_header(); ?>
 							            $query->the_post();
 													$do_not_duplicate[] = get_the_ID(); //store the ID of each post into the array. this post will no longer apear in the other sections
 							            ?>
-													<div class="<?=$mdClass?> postCol">
+													<div class="<?=$mdClass?> my-2">
 														<?php get_template_part( 'template-parts/content_col');	?>
 													</div>
 

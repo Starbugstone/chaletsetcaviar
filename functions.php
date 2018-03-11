@@ -94,7 +94,7 @@ function chaletsetcaviar_customFormatGallery($string,$attr){
 	static $instance = 0;
 	$instance++;
 
-    $output = '<div id="pageCarousel-'.$instance.'" class="carousel slide postCarouselContainer" data-ride="carousel">';
+    $output = '<div id="pageCarousel-'.$instance.'" class="carousel slide postCarouselContainer mx-4" data-ride="carousel">';
 		$output .= '<div class="carousel-inner" role="listbox">';
     $posts = get_posts(array(
 			//'include' => $attr['ids'],

@@ -32,6 +32,7 @@
 
 
   ?>
-  <?php the_excerpt(  ); ?>
-
+  <div class="px-2 text-justify">
+    <?php the_excerpt(  ); ?>
+  </div>
   </article>

@@ -23,7 +23,7 @@ get_header(); ?>
 							get_template_part( 'template-parts/article_image');
 							//Get the legal stuff
 							?>
-							<div class="sidebarDetails">
+							<div class="sidebarDetails px-2 py-1  mt-2">
 								<?php
 								$typeOfProperty = get_field('type_de_bien');
 						    if($typeOfProperty == 'rent'){
