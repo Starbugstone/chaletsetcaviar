@@ -79,7 +79,7 @@ get_header(); ?>
 			*/
 
 			?>
-			<section class="container-fluid">
+			<div class="container-fluid">
 				<?php
 				if ( have_posts() ) {
 
@@ -150,7 +150,7 @@ get_header(); ?>
 					} //end foreach categories
 
 				} //endif; ?>
-			</section><!-- end container section  -->
+			</div><!-- end container section  -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
