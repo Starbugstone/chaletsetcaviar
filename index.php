@@ -55,9 +55,7 @@ get_header(); ?>
 							</div>
 							<?php
 						}
-						//echo $image.'<br>';
 						$title = get_theme_mod('carousel_image_title_'.$i);
-						//echo $title.'<br><br>';
 					}//end For loop
 					?>
 
@@ -127,14 +125,9 @@ get_header(); ?>
 												}
 							            $query->the_post();
 													$do_not_duplicate[] = get_the_ID(); //store the ID of each post into the array. this post will no longer apear in the other sections
-
 							            ?>
-
-
 													<div class="<?=$mdClass?> postCol">
-														<?php
-								            get_template_part( 'template-parts/content_col');
-														?>
+														<?php get_template_part( 'template-parts/content_col');	?>
 													</div>
 
 							        <?php } // end while ?>
@@ -146,7 +139,6 @@ get_header(); ?>
 
 						// Use reset to restore original query.
 						wp_reset_postdata();
-						//echo('<hr>');
 					} //end foreach categories
 
 				} //endif; ?>
@@ -156,5 +148,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-//get_sidebar(); //EDIT : No sidebar needed
 get_footer();

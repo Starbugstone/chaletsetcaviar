@@ -17,64 +17,54 @@ get_header(); ?>
 					while ( have_posts() ) : the_post();
 					?>
 
-					<div class="col-md-4">
-				    <?php
-						//grab the image
-						get_template_part( 'template-parts/article_image');
-						//Get the legal stuff
-						?>
-						<div class="sidebarDetails">
-							<?php
-							$typeOfProperty = get_field('type_de_bien');
-					    if($typeOfProperty == 'rent'){
-					      get_template_part( 'template-parts/acf_rent');
-					    }
-					    if($typeOfProperty == 'sell'){
-					      get_template_part( 'template-parts/acf_sell');
-					    }
-							$category = get_the_category();
+						<div class="col-md-4">
+					    <?php
+							//grab the image
+							get_template_part( 'template-parts/article_image');
+							//Get the legal stuff
 							?>
-							<p class="returnToCategory"><a href="<?php echo get_category_link($category[0]->term_id); ?>">Autres <?=$category[0]->name?></a></p>
-					</div>
-						<?php
-						?>
-					</div>
-					<div class="col-md-8">
-						<?php
-						the_title( '<h1 class="entry-title">', '</h1>' );
-						?>
-						<div class="entry-content">
+							<div class="sidebarDetails">
+								<?php
+								$typeOfProperty = get_field('type_de_bien');
+						    if($typeOfProperty == 'rent'){
+						      get_template_part( 'template-parts/acf_rent');
+						    }
+						    if($typeOfProperty == 'sell'){
+						      get_template_part( 'template-parts/acf_sell');
+						    }
+								$category = get_the_category();
+								?>
+								<p class="returnToCategory"><a href="<?php echo get_category_link($category[0]->term_id); ?>">Autres <?=$category[0]->name?></a></p>
+							</div>
+						</div>
+						<div class="col-md-8">
 							<?php
-								the_content( sprintf(
-									wp_kses(
-										/* translators: %s: Name of current post. Only visible to screen readers */
-										__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'chaletsetcaviar' ),
-										array(
-											'span' => array(
-												'class' => array(),
-											),
-										)
-									),
-									get_the_title()
-								) );
-
-								wp_link_pages( array(
-									'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chaletsetcaviar' ),
-									'after'  => '</div>',
-								) );
+							the_title( '<h1 class="entry-title">', '</h1>' );
 							?>
-						</div><!-- .entry-content -->
+							<div class="entry-content">
+								<?php
+									the_content( sprintf(
+										wp_kses(
+											/* translators: %s: Name of current post. Only visible to screen readers */
+											__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'chaletsetcaviar' ),
+											array(
+												'span' => array(
+													'class' => array(),
+												),
+											)
+										),
+										get_the_title()
+									) );
 
-					</div>
+									wp_link_pages( array(
+										'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'chaletsetcaviar' ),
+										'after'  => '</div>',
+									) );
+								?>
+							</div><!-- .entry-content -->
+
+						</div>
 					<?php
-						/*get_template_part( 'template-parts/content', get_post_type() );
-
-						the_post_navigation();
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;*/
-
 					endwhile; // End of the loop.
 					?>
 				</div><!-- End Row -->
@@ -83,6 +73,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
 	<?php // Edit Link
 	if ( get_edit_post_link() ) : ?>
 		<div class="editLink">
@@ -91,6 +82,6 @@ get_header(); ?>
 			</a>
 		</div><!-- .editLink -->
 	<?php endif; ?>
+
 <?php
-//get_sidebar();
 get_footer();

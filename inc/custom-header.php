@@ -16,17 +16,6 @@
  *
  * @uses chaletsetcaviar_header_style()
  */
-/*function chaletsetcaviar_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'chaletsetcaviar_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
-		'flex-height'            => true,
-		'wp-head-callback'       => 'chaletsetcaviar_header_style',
-	) ) );
-}
-add_action( 'after_setup_theme', 'chaletsetcaviar_custom_header_setup' );*/ //EDIT : Disactivated for the moment, might need to reactivate later if slide isn't possible within the time frame
 
 if ( ! function_exists( 'chaletsetcaviar_header_style' ) ) :
 	/**

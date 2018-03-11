@@ -9,60 +9,59 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
-			// get the current taxonomy term
-			$term = get_queried_object();
+	<?php
+	if ( have_posts() ) :
+		// get the current taxonomy term
+		$term = get_queried_object();
 
-			//set default background image
-			$backgroundImage = get_template_directory_uri().'/img/default_header.jpg';
+		//set default background image
+		$backgroundImage = get_template_directory_uri().'/img/default_header.jpg';
 
-			//update with ACF field
-			if(get_field('image_dentete', $term)){
-				$backgroundImage = get_field('image_dentete', $term);
-			}
-			?>
+		//update with ACF field
+		if(get_field('image_dentete', $term)){
+			$backgroundImage = get_field('image_dentete', $term);
+		}
+		?>
 
-			<header class="page-header">
-				<div class="full_bg_image" style="background-image: url('<?=$backgroundImage?>');"></div>
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-
-				?>
-			</header><!-- .page-header -->
-			<div class="container-fluid">
-				<div class="row">
-					<?php
-					/* Start the Loop */
-					while ( have_posts() ) : the_post();
-						?>
-						<div class="col-12 my-2 px-md-5">
-							<?php
-
-							get_template_part( 'template-parts/content_line');
-							?>
-						</div>
-						<?php
-					endwhile;
-					?>
-				</div>
-			</div>
+		<header class="page-header">
+			<div class="full_bg_image" style="background-image: url('<?=$backgroundImage?>');"></div>
 			<?php
-			the_posts_navigation();
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
 
-		else :
+			?>
+		</header><!-- .page-header -->
+		<div class="container-fluid">
+			<div class="row">
+				<?php
+				/* Start the Loop */
+				while ( have_posts() ) : the_post();
+					?>
+					<div class="col-12 my-2 px-md-5">
+						<?php
 
-			get_template_part( 'template-parts/content', 'none' );
+						get_template_part( 'template-parts/content_line');
+						?>
+					</div>
+					<?php
+				endwhile;
+				?>
+			</div>
+		</div>
+		<?php
+		the_posts_navigation();
 
-		endif; ?>
+	else :
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		get_template_part( 'template-parts/content', 'none' );
+
+	endif; ?>
+
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
-//get_sidebar();
 get_footer();
