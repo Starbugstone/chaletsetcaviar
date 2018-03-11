@@ -10,7 +10,7 @@
 ?>
 
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing hoverLine' ); ?>>
+  <article id="post-<?php the_ID(); ?>" <?php post_class( 'category-listing hoverLine postArticle' ); ?> data-post-link="<?php the_permalink(); ?>">
     <div class="row justify-content-center">
       <div class="col-md-10 text-center">
         <h2 class="entry-title">
