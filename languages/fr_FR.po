@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-02-28 08:16+0100\n"
+"PO-Revision-Date: 2018-03-11 10:27+0100\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.0.6\n"
 "Last-Translator: \n"
@@ -24,42 +24,44 @@ msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Contenu Introuvable. L'outil de Recherche ou les Liens ci-dessous vous "
+"remettront peut-être sur la voie ?"
 
 #: 404.php:30
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Catégories les plus utilisées"
 
 #. translators: %1$s: smiley
 #: 404.php:47
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Jetez un œil dans les archives mensuelles. %1$s"
 
 #. translators: 1: title.
 #: comments.php:34
 msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
+msgstr "Une réflexion sur &ldquo;%1$s&rdquo;"
 
 #: comments.php:67
 msgid "Comments are closed."
-msgstr ""
+msgstr "Les commentaires sont fermés"
 
 #: footer.php:18
 msgid "https://wordpress.org/"
-msgstr ""
+msgstr "https://wordpress.org/"
 
 #. translators: %s: CMS name, i.e. WordPress.
 #: footer.php:20
 msgid "Proudly powered by %s"
-msgstr ""
+msgstr "Fi&egrave;rement propuls&eacute; par %s"
 
 #. translators: 1: Theme name, 2: Theme author.
 #: footer.php:25
 msgid "Theme: %1$s by %2$s."
-msgstr ""
+msgstr "Thème  %1$s par %2$s."
 
 #: functions.php:47
 msgid "Primary"
-msgstr ""
+msgstr "Primaire"
 
 #: functions.php:105
 msgid "Sidebar"
@@ -105,46 +107,51 @@ msgstr ""
 #. translators: %s: search query.
 #: search.php:21
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Résultats de recherche pour : %s"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
-msgstr ""
+msgstr "Aucun résultat"
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:25
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Prêt a publier votre premier post ? <a href=\"%1$s\">Commencez ici</a>."
 
 #: template-parts/content-none.php:38
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Désolé, mais rien ne corespond a votre recherche, essayez avec d'autres mots "
+"clé."
 
 #: template-parts/content-none.php:44
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Il semblerait que nous n'avons pas trouvé ceux que vous cherchez, essayez le "
+"moteur de recherche."
 
 #: template-parts/content-page.php:22 template-parts/content.php:45
 msgid "Pages:"
-msgstr ""
+msgstr "Pages : "
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:34
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "Continuez à lire<span class=\"screen-reader-text\"> \"%s\"</span>"
 
 #. Theme Name of the plugin/theme
 msgid "_s"
-msgstr ""
+msgstr "_s"
 
 #. Theme URI of the plugin/theme
 msgid "https://underscores.me/"
-msgstr ""
+msgstr "https://underscores.me/"
 
 #. Description of the plugin/theme
 msgid ""

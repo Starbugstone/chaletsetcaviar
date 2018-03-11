@@ -14,7 +14,16 @@ get_header(); ?>
 
 		<?php
 		if ( have_posts() ) :
+			// get the current taxonomy term
+			$term = get_queried_object();
 
+			//set default background image
+			$backgroundImage = get_template_directory_uri().'/img/default_header.jpg';
+
+			//update with ACF field
+			if(get_field('image_dentete', $term)){
+				$backgroundImage = get_field('image_dentete', $term);
+			}
 			?>
 
 			<header class="page-header">
@@ -25,20 +34,24 @@ get_header(); ?>
 
 				?>
 			</header><!-- .page-header -->
+			<div class="container-fluid">
+				<div class="row">
+					<?php
+					/* Start the Loop */
+					while ( have_posts() ) : the_post();
+						?>
+						<div class="col-12 my-2 px-md-5">
+							<?php
 
+							get_template_part( 'template-parts/content_line');
+							?>
+						</div>
+						<?php
+					endwhile;
+					?>
+				</div>
+			</div>
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
 			the_posts_navigation();
 
 		else :
@@ -51,5 +64,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
