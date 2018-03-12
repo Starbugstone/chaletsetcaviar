@@ -41,6 +41,15 @@ get_header(); ?>
 							?>
 						</div><!-- .entry-content -->
 					</article><!-- #post-<?php the_ID(); ?> -->
+
+					<?php // Edit Link
+					if ( get_edit_post_link() ) : ?>
+						<div class="editLink">
+							<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-dark">
+								Editer le post
+							</a>
+						</div><!-- .editLink -->
+					<?php endif; ?>
 				<?php
 				endwhile; // End of the loop.
 				?>
@@ -49,14 +58,7 @@ get_header(); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
-<?php // Edit Link
-if ( get_edit_post_link() ) : ?>
-	<div class="editLink">
-		<a href="<?php get_edit_post_link(); ?>" class="btn btn-dark">
-			Editer le post
-		</a>
-	</div><!-- .editLink -->
-<?php endif; ?>
+
 <?php
 //get_sidebar();
 get_footer();

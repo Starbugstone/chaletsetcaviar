@@ -108,9 +108,12 @@ Index page Articles
 ==============================================
 */
 
-.entry-title{
-  /* text-align: center; */
+/*Parallelax caroussel*/
+#carouselIndex .carousel-item{
+  background-attachment: fixed;
 }
+
+
 .entry-title a, .entry-title a:visited, .entry-title a:focus, .entry-title a:active, .entry-title a:hover{
   text-decoration: none;
   color: #8d8d8d;

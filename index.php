@@ -25,7 +25,7 @@ get_header(); ?>
 			*/
 			?>
 
-			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<div id="carouselIndex" class="carousel slide" data-ride="carousel">
 
 				<div class="carousel-inner" role="listbox">
 
@@ -59,11 +59,11 @@ get_header(); ?>
 					}//end For loop
 					?>
 
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<a class="carousel-control-prev" href="#carouselIndex" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="sr-only">Precedent</span>
 				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<a class="carousel-control-next" href="#carouselIndex" role="button" data-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="sr-only">Suivant</span>
 				</a>
