@@ -158,6 +158,8 @@ function chaletsetcaviar_scripts() {
 
 	wp_enqueue_style('chaletsetcaviar-ekko-lightbox-css', '//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css', array(), '5.3.0');
 
+	wp_enqueue_style('chaletsetcaviar-google-fonts', '//fonts.googleapis.com/css?family=Rozha+One');
+
 	wp_enqueue_script( 'chaletsetcaviar-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'chaletsetcaviar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

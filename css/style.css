@@ -122,8 +122,6 @@ Index page Articles
 .index_article_post_image{
   height:300px;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
   text-align: center;
 }
 
@@ -166,9 +164,11 @@ section.listing>h2{
 
 .listing h2 a,
 .listing h2 a:hover,
+.listing h2 a:focus,
 .listing h2 a:visited{
   text-decoration: none;
   color: #8d8d8d;
+  font-family: 'Rozha One', serif;
 }
 
 /*
@@ -209,13 +209,13 @@ Pages
   background-size: cover;
 }
 
-
-.content-area {
-  /* margin-top: 100px; */
-}
-
 .main-content-area {
   margin-top: 0px;
+}
+
+.page-title, .archive-description, .entry-title{
+    font-family: 'Rozha One', serif;
+    color: #8d8d8d;
 }
 
 
