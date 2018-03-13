@@ -29,10 +29,3 @@ function geticonHtml($iconID, $iconTitle){
   $returniconHTML = '<span class="fa fa-'.$iconID.'" aria-hidden="true" title="'.$iconTitle.'"></span>';
   return $returniconHTML;
 }
-
-/*$icons = get_field('icones');
-if($icons){
-  foreach ($icons as $icon) {
-    echo getIcon($icon);
-  }
-}*/

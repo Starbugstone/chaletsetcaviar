@@ -60,41 +60,25 @@ function chaletsetcaviar_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'image_control_'.$i, array(
-		  //'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
-			'label' => 'Carousel Image '.$i,
+			'label' => 'Image du Carousel '.$i,
 		  'section' => 'chaletsetcaviar_carousel',
-		  //'mime_type' => 'image',
 			'settings'   => 'carousel_image_'.$i,
 		) ) );
 
 		$wp_customize->add_control( 'image_control_title_'.$i, array(
 			'type' => 'text',
-		  //'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
-			'label' => 'Carousel Title '.$i,
+			'label' => 'Titre du Carousel '.$i,
 		  'section' => 'chaletsetcaviar_carousel',
 			'settings'   => 'carousel_image_title_'.$i,
 		) );
 
 		$wp_customize->add_control( 'image_control_subtitle_'.$i, array(
 			'type' => 'text',
-		  //'label' => __( 'Featured Home Page Image', 'theme_textdomain' ),
-			'label' => 'Carousel Subtitle '.$i,
+			'label' => 'Sous-titre du Carousel '.$i,
 		  'section' => 'chaletsetcaviar_carousel',
 			'settings'   => 'carousel_image_subtitle_'.$i,
 		) );
-
-
 	}
-
-	/*$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
-		'label'        => 'Background Color',
-		'section'    => 'chaletsetcaviar_carousel',
-		'settings'   => 'carousel_image_1',
-	) ) );*/
-
-
-
-
 }
 add_action( 'customize_register', 'chaletsetcaviar_customize_register' );
 
