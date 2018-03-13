@@ -52,11 +52,12 @@
         $ges = get_field_object('ges');
         if($ges){
           ?>
-          <div class="col-md-6">
+          <div class="col-xl-6">
             <p>GES</p>
             <?php
             //var_dump($ges);
             $gesVal = $ges['value'];
+            $default = false;
             switch ($gesVal){
               case "A":
                 $gesImg = get_template_directory_uri().'/img/ges/a.png';
@@ -80,10 +81,19 @@
                 $gesImg = get_template_directory_uri().'/img/ges/g.png';
                 break;
               default:
+                $default=true;
                 $gesImg = get_template_directory_uri().'/img/ges/g.png';
             }
+            if(!$default){
+              ?>
+              <img src="<?=$gesImg?>" alt="GES" />
+              <?php
+            }else{
+              ?>
+              <p>Non renseigné</p>
+              <?php
+            }
             ?>
-            <img src="<?=$gesImg?>" alt="GES" />
           </div>
           <?php
         }
@@ -91,11 +101,12 @@
         $classe_energetique = get_field_object('classe_energetique');
         if($classe_energetique){
           ?>
-          <div class="col-md-6">
+          <div class="col-xl-6">
             <p>Classe Energetique</p>
             <?php
             //var_dump($ges);
             $dpeVal = $classe_energetique['value'];
+            $default = false;
             switch ($dpeVal){
               case "A":
                 $dpeImg = get_template_directory_uri().'/img/dpe/a.png';
@@ -119,10 +130,20 @@
                 $dpeImg = get_template_directory_uri().'/img/dpe/g.png';
                 break;
               default:
+                $default = true;
                 $dpeImg = get_template_directory_uri().'/img/dpe/g.png';
             }
+            if(!$default){
             ?>
-            <img src="<?=$dpeImg?>" alt="DPE" />
+              <img src="<?=$dpeImg?>" alt="DPE" />
+            <?php
+            }else{
+            ?>
+              <p>Non renseigné</p>
+            <?php
+            }
+            ?>
+
           </div>
           <?php
         }
