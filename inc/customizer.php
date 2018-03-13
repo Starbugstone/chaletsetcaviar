@@ -30,7 +30,7 @@ function chaletsetcaviar_customize_register( $wp_customize ) {
 	//https://premium.wpmudev.org/blog/wordpress-theme-customizer-guide/
 	//https://developer.wordpress.org/themes/customize-api/customizer-objects/
 	$wp_customize->add_section( 'chaletsetcaviar_carousel' , array(
-    'title'      => 'Carousel',
+    'title'      => 'Carrousel',
     'priority'   => 30,
 	) );
 
@@ -48,33 +48,31 @@ function chaletsetcaviar_customize_register( $wp_customize ) {
 		) );
 
 		$wp_customize->add_setting( 'carousel_image_title_'.$i , array(
-	    //'default'     => '#43C6E4',
 	    'transport'   => 'refresh',
 			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		) );
 
 		$wp_customize->add_setting( 'carousel_image_subtitle_'.$i , array(
-	    //'default'     => '#43C6E4',
 	    'transport'   => 'refresh',
 			'sanitize_callback' => 'wp_filter_nohtml_kses'
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'image_control_'.$i, array(
-			'label' => 'Image du Carousel '.$i,
+			'label' => 'Image du Carrousel '.$i,
 		  'section' => 'chaletsetcaviar_carousel',
 			'settings'   => 'carousel_image_'.$i,
 		) ) );
 
 		$wp_customize->add_control( 'image_control_title_'.$i, array(
 			'type' => 'text',
-			'label' => 'Titre du Carousel '.$i,
+			'label' => 'Titre du Carrousel '.$i,
 		  'section' => 'chaletsetcaviar_carousel',
 			'settings'   => 'carousel_image_title_'.$i,
 		) );
 
 		$wp_customize->add_control( 'image_control_subtitle_'.$i, array(
 			'type' => 'text',
-			'label' => 'Sous-titre du Carousel '.$i,
+			'label' => 'Sous-titre du Carrousel '.$i,
 		  'section' => 'chaletsetcaviar_carousel',
 			'settings'   => 'carousel_image_subtitle_'.$i,
 		) );
