@@ -34,9 +34,6 @@ get_header(); ?>
 					</div>
 				</div>
 			</div>
-				<?php
-				the_posts_navigation();
- 				?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
