@@ -28,11 +28,14 @@ get_header(); ?>
 
 		<header class="page-header">
 			<div class="full_bg_image" style="background-image: url('<?=$backgroundImage?>');"></div>
-			<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-
-			?>
+			<div class="container-fluid">
+				<div class="col-12 my-2 px-md-5">
+					<?php
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_description( '<div class="archive-description">', '</div>' );
+					?>
+				</div>
+			</div>
 		</header><!-- .page-header -->
 		<div class="container-fluid">
 			<div class="row">

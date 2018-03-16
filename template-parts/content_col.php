@@ -15,7 +15,7 @@
     <?php
     get_template_part( 'template-parts/article_image');
     ?>
-    <h2 class="entry-title">
+    <h2 class="entry-title text-center">
         <a href="<?php the_permalink(); ?>">
             <?php the_title(); ?>
         </a>
