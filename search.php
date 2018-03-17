@@ -22,12 +22,14 @@ get_header();
 
 		<header class="page-header">
 			<div class="full_bg_image" style="background-image: url('<?=$backgroundImage?>');"></div>
-			<div class="row mt-2 align-items-center">
-				<div class="col-md-8">
-					<h1>Recherche : <?php echo get_search_query(); ?></h1>
-				</div>
-				<div class="col-md-4">
-					<?php get_search_form(); ?>
+			<div class="container-fluid">
+				<div class="row align-items-center my-2 px-md-5"">
+					<div class="col-md-8">
+						<h1>Recherche : <?php echo get_search_query(); ?></h1>
+					</div>
+					<div class="col-md-4">
+						<?php get_search_form(); ?>
+					</div>
 				</div>
 			</div>
 		</header><!-- .page-header -->
