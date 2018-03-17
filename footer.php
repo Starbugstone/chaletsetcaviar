@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer py-2 container-fluid">
+	<footer id="colophon" class="site-footer py-2 px-4 container-fluid">
 		<div class="row px-3">
 			<div class="col-md-4">
 				<?php
