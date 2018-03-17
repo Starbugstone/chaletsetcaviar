@@ -199,6 +199,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Register the sidebars.
+ */
+require get_template_directory() . '/inc/sidebars.php';
+
+/**
  *Needed Plugins.
  */
 //require get_template_directory() . '/inc/required-plugins.php'; EDIT - Included directly into the theme

@@ -96,10 +96,15 @@ Footer
 ==============================================
 */
 
-.site-footer{
+/* .site-footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
+} */
+.site-footer{
+  background-color: black;
+  color: white;
+  border-radius: 15px 15px 0px 0px;
 }
 
 /*
