@@ -96,15 +96,23 @@ Footer
 ==============================================
 */
 
-/* .site-footer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
 .site-footer{
   background-color: black;
   color: #c5c5c5;
   border-radius: 15px 15px 0px 0px;
+}
+
+.site-footer a, .site-footer a:visited, .site-footer a:focus, .site-footer a:active, .site-footer a:hover{
+  color: #c5c5c5;
+}
+
+.site-footer ul{
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.site-footer li{
+  list-style-type: none;
 }
 
 /*
