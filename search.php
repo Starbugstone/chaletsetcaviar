@@ -23,7 +23,7 @@ get_header();
 		<header class="page-header">
 			<div class="full_bg_image" style="background-image: url('<?=$backgroundImage?>');"></div>
 			<div class="container-fluid">
-				<div class="row align-items-center my-2 px-md-5"">
+				<div class="row align-items-center my-2 px-md-5">
 					<div class="col-md-8">
 						<h1>Recherche : <?php echo get_search_query(); ?></h1>
 					</div>
