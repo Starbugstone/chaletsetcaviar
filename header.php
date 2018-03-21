@@ -25,10 +25,7 @@ require get_template_directory() . '/inc/showIcons.php';
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'chaletsetcaviar' ); ?></a>
-	<?php
-		// Fix menu overlap
-		if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;"></div>';
-	?>
+
 	<header id="masthead" class="site-header">
 		<?php
 			// Fix menu overlap
