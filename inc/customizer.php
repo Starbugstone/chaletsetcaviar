@@ -77,6 +77,26 @@ function chaletsetcaviar_customize_register( $wp_customize ) {
 			'settings'   => 'carousel_image_subtitle_'.$i,
 		) );
 	}
+
+	//Custom Settings for the contactForm ID
+	//https://premium.wpmudev.org/blog/wordpress-theme-customizer-guide/
+	//https://developer.wordpress.org/themes/customize-api/customizer-objects/
+	$wp_customize->add_section( 'chaletsetcaviar_contactId' , array(
+    'title'      => 'ID du formulaire de contact',
+    'priority'   => 29,
+	) );
+
+	$wp_customize->add_setting( 'contactId' , array(
+		'transport'   => 'refresh',
+		'sanitize_callback' => 'wp_filter_nohtml_kses'
+	) );
+
+	$wp_customize->add_control( 'contactId', array(
+		'type' => 'text',
+		'label' => 'Entres le ID du contact form',
+		'section' => 'chaletsetcaviar_contactId',
+		'settings'   => 'contactId',
+	) );
 }
 add_action( 'customize_register', 'chaletsetcaviar_customize_register' );
 
