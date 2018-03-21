@@ -37,11 +37,13 @@ jQuery(function($){
       $(this).attr("data-searching", "yes");
       $icon.removeClass("fa-envelope-o");
       $icon.addClass("fa-times");
+      $("#contact-sidebar").addClass("displayedForm");
       $bar.show();
     }else{
       $(this).attr("data-searching", "no");
       $icon.removeClass("fa-times");
       $icon.addClass("fa-envelope-o");
+      $("#contact-sidebar").removeClass("displayedForm");
       $bar.hide();
     }
   });

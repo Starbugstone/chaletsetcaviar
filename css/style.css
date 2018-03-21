@@ -375,6 +375,11 @@ ContactBar
   opacity: 0.3;
 }
 
+#contact-sidebar.displayedForm{
+  bottom:10px;
+  overflow-y: scroll;
+}
+
 #contact-sidebar:hover{
   opacity: 1;
 }
