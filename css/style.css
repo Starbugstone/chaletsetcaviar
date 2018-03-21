@@ -355,3 +355,31 @@ SearchBar
 #searchbarForm{
   width: 66vw; /* Setting a decent width */
 }
+
+/*
+==============================================
+ContactBar
+==============================================
+*/
+
+#contact-sidebar{
+  display: flex;
+  position: fixed;
+  top: 205px;
+  right: 0;
+  padding: 10px;
+  background-color: #F1F3F5;
+  align-items: center;
+  z-index: 999; /*to be over the carrousel*/
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  opacity: 0.3;
+}
+
+#contact-sidebar:hover{
+  opacity: 1;
+}
+
+#contactForm{
+  width: 66vw; /* Setting a decent width */
+}

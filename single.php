@@ -88,4 +88,5 @@ get_header(); ?>
 
 <?php
 get_template_part( 'template-parts/searchbar');
+get_template_part( 'template-parts/contact');
 get_footer();
