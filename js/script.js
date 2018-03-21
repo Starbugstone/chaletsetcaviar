@@ -30,7 +30,6 @@ jQuery(function($){
   });
 
   $("#contactLogo").on("click",function(){
-    console.log("clicked");
     $searching = $(this).attr("data-searching");
     $icon = $(this).find('.fa');
     $bar = $(this).siblings("#contactForm");

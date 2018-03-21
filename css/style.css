@@ -369,7 +369,6 @@ ContactBar
   right: 0;
   padding: 10px;
   background-color: #F1F3F5;
-  align-items: center;
   z-index: 999; /*to be over the carrousel*/
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -381,5 +380,9 @@ ContactBar
 }
 
 #contactForm{
-  width: 66vw; /* Setting a decent width */
+  width: 33vw; /* Setting a decent width */
+}
+
+#contactForm label, #contactForm input{
+  width: 100%;
 }
