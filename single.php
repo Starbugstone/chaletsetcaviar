@@ -15,6 +15,7 @@ get_header(); ?>
 				<div class="row justify-content-center">
 					<?php
 					while ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/contact');
 					?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-10 category-listing'); ?>>
 							<div class="row">
@@ -88,5 +89,4 @@ get_header(); ?>
 
 <?php
 get_template_part( 'template-parts/searchbar');
-get_template_part( 'template-parts/contact');
 get_footer();
