@@ -101,13 +101,14 @@ function chaletsetcaviar_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'chaletsetcaviar_customize_register' );
 
 
-add_action( 'customize_register', 'chaletsetcaviar_remove_css_section', 15 );
+add_action( 'customize_register', 'chaletsetcaviar_remove_customizer_section', 15 );
 /**
  * Remove the additional CSS section, introduced in 4.7, from the Customizer.
  * @param $wp_customize WP_Customize_Manager
  */
-function chaletsetcaviar_remove_css_section( $wp_customize ) {
+function chaletsetcaviar_remove_customizer_section( $wp_customize ) {
 	$wp_customize->remove_section( 'custom_css' );
+	$wp_customize->remove_section( 'static_front_page' );
 }
 
 /**
