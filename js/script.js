@@ -6,8 +6,8 @@ jQuery(function($){
 
   //when clicked on the line displayed articles. Go strate to article
   $(".postArticle").each(function(){
-    $postUrl = $(this).data("post-link");
     $(this).on("click", function(){
+      $postUrl = $(this).data("post-link");
       window.location = $postUrl;
     })
   });
