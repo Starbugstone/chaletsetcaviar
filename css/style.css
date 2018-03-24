@@ -352,8 +352,41 @@ SearchBar
   opacity: 1;
 }
 
-#searchbarForm{
-  width: 66vw; /* Setting a decent width */
+/* #searchbarForm{
+  width: 66vw;
+} */
+
+/* // Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap */
+#searchbarForm, #contactForm{
+  width: 75vw;
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  #searchbarForm, #contactForm{
+    width: 75vw;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #searchbarForm, #contactForm{
+    width: 66vw;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #searchbarForm, #contactForm{
+    width: 45vw;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #searchbarForm, #contactForm{
+    width: 33vw;
+  }
 }
 
 /*
@@ -384,9 +417,9 @@ ContactBar
   opacity: 1;
 }
 
-#contactForm{
-  width: 33vw; /* Setting a decent width */
-}
+/* #contactForm{
+  width: 33vw;
+} */
 
 #contactForm label, #contactForm input{
   width: 100%;
