@@ -209,7 +209,11 @@ Categories
   transform: scale(1.01);
   transition-duration: 0.5s;
   box-shadow: 4px 4px 16px 0px rgba(84,84,84,0.65);
+}
 
+.site-main nav.posts-navigation{
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 /*
