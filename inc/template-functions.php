@@ -31,10 +31,12 @@ function chaletsetcaviar_pingback_header() {
 }
 add_action( 'wp_head', 'chaletsetcaviar_pingback_header' );
 
-
+/*
+* Adding classes to the prev and next buttons
+*/
 add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
 function posts_link_attributes() {
-    return 'class="styled-button"';
+    return 'class="btn btn-light"';
 }
