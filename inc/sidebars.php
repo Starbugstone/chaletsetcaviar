@@ -36,7 +36,7 @@
    'name' => 'Page Sidebar 1',
    'id' => 'page-sidebar-1',
    'description' => 'Zone a droite des pages',
-   'before_widget' => '<aside id="%1$s" class="widget %2$s col-md-4 category-listing pageSidebar pt-1">',
+   'before_widget' => '<aside id="%1$s" class="widget %2$s col-lg-4 category-listing pageSidebar pt-1">',
    'after_widget' => '</aside>',
    'before_title' => '<h2 class="widget-title entry-title">',
    'after_title' => '</h2>',
