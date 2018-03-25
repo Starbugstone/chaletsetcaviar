@@ -195,6 +195,7 @@ Styling for the container box on index
   background-color: white;
   height: 100%;
   overflow: hidden;
+  padding-bottom: 15px;
 }
 
 
