@@ -23,7 +23,7 @@ get_header(); ?>
 				while ( have_posts() ) : the_post();
 
 				if(is_active_sidebar('page-sidebar-1')){
-					$widthClass = "col-lg-6 mr-3 pt-1";
+					$widthClass = "col-lg-6 mr-lg-3 pt-1";
 				}else{
 					$widthClass = "col-lg-10 pt-1";
 				}
