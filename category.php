@@ -53,10 +53,11 @@ get_header(); ?>
 				endwhile;
 				?>
 			</div>
+			<?php
+			the_posts_navigation();
+			?>
 		</div>
 		<?php
-		the_posts_navigation();
-
 	else :
 
 		get_template_part( 'template-parts/content', 'none' );
