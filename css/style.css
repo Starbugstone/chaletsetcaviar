@@ -231,6 +231,9 @@ Pages
     color: #8d8d8d;
 }
 
+.pageSidebar label, .pageSidebar input{
+  width: 100%;
+}
 
 
 /*

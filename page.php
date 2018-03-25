@@ -21,9 +21,16 @@ get_header(); ?>
 
 				<?php
 				while ( have_posts() ) : the_post();
+
+				if(is_active_sidebar('page-sidebar-1')){
+					$widthClass = "col-md-6 mr-3 pt-1";
+				}else{
+					$widthClass = "col-md-10 pt-1";
+				}
+
 				?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-10 category-listing'); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php post_class($widthClass.' category-listing'); ?>>
 						<header class="entry-header">
 							<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 						</header><!-- .entry-header -->
@@ -41,6 +48,12 @@ get_header(); ?>
 							?>
 						</div><!-- .entry-content -->
 					</article><!-- #post-<?php the_ID(); ?> -->
+
+					<?php
+					if(is_active_sidebar('page-sidebar-1')){
+						dynamic_sidebar('page-sidebar-1');
+					}
+					?>
 
 					<?php // Edit Link
 					if ( get_edit_post_link() ) : ?>
