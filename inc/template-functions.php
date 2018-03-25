@@ -30,3 +30,15 @@ function chaletsetcaviar_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'chaletsetcaviar_pingback_header' );
+
+function posts_link_next_class($format){
+     $format = str_replace('href=', 'class="next clean-gray" href=', $format);
+     return $format;
+}
+add_filter('next_post_link', 'posts_link_next_class');
+
+function posts_link_prev_class($format) {
+     $format = str_replace('href=', 'class="prev clean-gray" href=', $format);
+     return $format;
+}
+add_filter('previous_post_link', 'posts_link_prev_class');
