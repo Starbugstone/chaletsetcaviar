@@ -25,7 +25,7 @@ get_header(); ?>
 			*/
 			?>
 
-			<div id="carouselIndex" class="carousel slide" data-ride="carousel">
+			<div id="carouselIndex" class="carousel slide d-print-none" data-ride="carousel">
 
 				<div class="carousel-inner" role="listbox">
 
