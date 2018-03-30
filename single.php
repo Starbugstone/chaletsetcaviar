@@ -36,7 +36,7 @@ get_header(); ?>
 								    }
 										$category = get_the_category();
 										?>
-										<p class="returnToCategory"><a href="<?php echo get_category_link($category[0]->term_id); ?>">Autres <?=$category[0]->name?></a></p>
+										<p class="returnToCategory d-print-none"><a href="<?php echo get_category_link($category[0]->term_id); ?>">Autres <?=$category[0]->name?></a></p>
 									</div>
 								</div>
 								<div class="col-md-8">

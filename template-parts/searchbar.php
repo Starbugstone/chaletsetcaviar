@@ -7,7 +7,7 @@
 
 ?>
 
-<div id="searchbar-sidebar">
+<div id="searchbar-sidebar" class="d-print-none">
   <div id="searchbarForm" class="mr-2" style="display: none;">
     <?php get_search_form(); ?>
   </div>
