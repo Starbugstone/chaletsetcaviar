@@ -15,7 +15,7 @@
     if ( has_post_thumbnail() ){
       $post_thumbnail_id = get_post_thumbnail_id();
       $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-      echo ('<div class="postThumbnail" style="background-image : url('.$post_thumbnail_url.')"></div>');
+      echo ('<div class="postThumbnail" style="background-image : url('.$post_thumbnail_url.')"><img class="d-none d-print-block" alt="'.get_the_title().'" src="'.$post_thumbnail_url.'" /></div>');
     }else{
       //default image
       $defaultImageUri = get_template_directory_uri().'/img/noImage.jpg';
