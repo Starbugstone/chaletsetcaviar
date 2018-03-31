@@ -27,7 +27,7 @@ get_header(); ?>
 		?>
 
 		<header class="page-header">
-			<div class="full_bg_image" style="background-image: url('<?=$backgroundImage?>');"></div>
+			<div class="full_bg_image d-print-none" style="background-image: url('<?=$backgroundImage?>');"></div>
 			<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );

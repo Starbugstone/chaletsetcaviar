@@ -44,7 +44,7 @@ require get_template_directory() . '/inc/showIcons.php';
 			<?php
 			endif;
 			?>
-			<button class="menu-toggle btn-outline-secondary" aria-controls="primary-menu" aria-expanded="false"><span class="fa fa-bars"></span></button>
+			<button class="menu-toggle btn-outline-secondary d-print-none" aria-controls="primary-menu" aria-expanded="false"><span class="fa fa-bars"></span></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -57,7 +57,7 @@ require get_template_directory() . '/inc/showIcons.php';
 		<?php
 		if ( is_front_page() && is_home() ) : ?>
 
-			<div itemscope class="site-branding">
+			<div itemscope class="site-branding d-print-none">
 				<?php
 				the_custom_logo();
 

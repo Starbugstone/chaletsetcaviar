@@ -27,7 +27,7 @@ get_header(); ?>
 		?>
 
 		<header class="page-header">
-			<div class="full_bg_image" style="background-image: url('<?=$backgroundImage?>');"></div>
+			<div class="full_bg_image d-print-none" style="background-image: url('<?=$backgroundImage?>');"></div>
 			<div class="container-fluid">
 				<div class="col-12 my-2 px-md-5">
 					<?php

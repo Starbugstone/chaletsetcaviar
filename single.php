@@ -69,7 +69,7 @@ get_header(); ?>
 
 								<?php // Edit Link
 								if ( get_edit_post_link() ) : ?>
-									<div class="editLink">
+									<div class="editLink d-print-none">
 										<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-dark">
 											Editer le post
 										</a>

@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer py-2 px-4 container-fluid">
-		<div class="row px-3">
+		<div class="row px-3 d-print-none">
 			<div class="col-md-4 text-left">
 				<?php
 				if(is_active_sidebar('footer-sidebar-1')){
