@@ -51,7 +51,13 @@ get_header(); ?>
 
 					<?php
 					if(is_active_sidebar('page-sidebar-1')){
-						dynamic_sidebar('page-sidebar-1');
+						?>
+						<aside class="col-lg-4 category-listing pageSidebar pt-1">
+							<?php
+							dynamic_sidebar('page-sidebar-1');
+							?>
+						</aside>
+						<?php
 					}
 					?>
 

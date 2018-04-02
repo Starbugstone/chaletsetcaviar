@@ -6,7 +6,7 @@
  */
  function chaletsetcaviar_widgets_init(){
    register_sidebar( array(
-   'name' => 'Footer Sidebar 1',
+   'name' => 'Pied de page 1',
    'id' => 'footer-sidebar-1',
    'description' => 'Zone pied de page 1',
    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -15,7 +15,7 @@
    'after_title' => '</h3>',
    ) );
    register_sidebar( array(
-   'name' => 'Footer Sidebar 2',
+   'name' => 'Pied de page 2',
    'id' => 'footer-sidebar-2',
    'description' => 'Zone pied de page 2',
    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -24,7 +24,7 @@
    'after_title' => '</h3>',
    ) );
    register_sidebar( array(
-   'name' => 'Footer Sidebar 3',
+   'name' => 'Pied de page 3',
    'id' => 'footer-sidebar-3',
    'description' => 'Zone pied de page 3',
    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -33,11 +33,11 @@
    'after_title' => '</h3>',
    ) );
    register_sidebar( array(
-   'name' => 'Page Sidebar 1',
+   'name' => 'zone droite pages',
    'id' => 'page-sidebar-1',
    'description' => 'Zone a droite des pages',
-   'before_widget' => '<aside id="%1$s" class="widget %2$s col-lg-4 category-listing pageSidebar pt-1">',
-   'after_widget' => '</aside>',
+   'before_widget' => '<div id="%1$s" class="widget %2$s">',
+   'after_widget' => '</div>',
    'before_title' => '<h2 class="widget-title entry-title">',
    'after_title' => '</h2>',
    ) );
